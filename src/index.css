@@ -1,13 +1,106 @@
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: 'Quicksand', sans-serif;
+  color: rgb(35, 21, 5);
+  background-color: #44838f;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.App {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+p,
+li,
+label,
+input,
+button {
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+h1 {
+  text-align: center;
+  font-family: 'Shrikhand', serif;
+  font-size: 4rem;
+  letter-spacing: 0.2em;
+  color: #ed5d40;
+  text-shadow: -3px 3px 0 #891c29;
+}
+
+.line-numbers {
+  width: 400px;
+  border-radius: 1em;
+}
+
+.challenge {
+  width: 700px;
+  margin: 0 3em;
+  padding: 1em 2em;
+  background: #ffffe4;
+  border: 2px solid #68d0bd;
+  border-radius: 1em;
+  box-shadow: -6px 6px 0 #68d0bd;
+}
+
+.challenge h2 {
+  letter-spacing: 0.2em;
+  color: #ed5d40;
+}
+
+.clue {
+  margin: 2em 0 1em;
+  padding: 0 1em;
+  border: 2px dashed #ed5d40;
+  border-radius: 1em;
+}
+
+.solution {
+  margin: 2em 0 1em;
+  padding: 0 1em 0.7em;
+  background-color: rgba(104, 208, 189, 0.5);
+  border: 2px solid #ed5d40;
+  border-radius: 1em;
+}
+
+.challenge-top,
+.clue-top,
+.solution-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.button {
+  min-width: 5em;
+  padding: 0.4em 0.2em;
+  font-size: 1rem;
+  color: #ffffe4;
+  background-color: #ed5d40;
+  border: 2px solid #891c29;
+  border-radius: 1em;
+  box-shadow: 2px 2px 0 #891c29;
+  cursor: pointer;
+  transition: all 0.2s ease-in;
+
+  &:hover {
+    margin-right: 0.1em;
+    box-shadow: 3px 4px 0 #891c29;
+  }
+}
+
+.clue-text {
+  margin: 0.5em 0 1em;
+  padding: 0.1em 1.1em;
+  background-color: rgba(104, 208, 189, 0.3);
+  border-radius: 1em;
+}
+
+.code-box {
+  /* some styles */
+}
+.inline {
+  /* some other styles */
 }
