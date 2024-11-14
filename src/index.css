@@ -3,7 +3,11 @@ body {
   color: rgb(35, 21, 5);
   background-color: #44838f;
 }
-
+/* * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+} */
 .App {
   display: flex;
   flex-direction: column;
@@ -50,11 +54,49 @@ h1 {
   color: #ed5d40;
 }
 
-.clue {
+.challenge-top,
+.clues-top,
+.solution-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.clues {
   margin: 2em 0 1em;
-  padding: 0 1em;
+  padding: 0 1em 1em;
   border: 2px dashed #ed5d40;
   border-radius: 1em;
+}
+
+.clues-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7em;
+  margin-top: 0.4em;
+  padding: 1em;
+  background-color: rgba(104, 208, 189, 0.3);
+  border-radius: 1em;
+}
+.clue p {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.clue-title {
+  font-size: 1.1rem;
+  font-weight: 800;
+  cursor: pointer;
+}
+.clue {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+  box-sizing: border-box;
+  padding: 0.7em 1em;
+  border-radius: 1em;
+  background-color: #ffffe4;
+  border: 2px solid #ed5d40;
 }
 
 .solution {
@@ -64,15 +106,6 @@ h1 {
   border: 2px solid #ed5d40;
   border-radius: 1em;
 }
-
-.challenge-top,
-.clue-top,
-.solution-top {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
 .button {
   min-width: 5em;
   padding: 0.4em 0.2em;
@@ -91,16 +124,12 @@ h1 {
   }
 }
 
-.clue-text {
-  margin: 0.5em 0 1em;
-  padding: 0.1em 1.1em;
-  background-color: rgba(104, 208, 189, 0.3);
-  border-radius: 1em;
-}
-
 .code-box {
-  /* some styles */
+  max-width: 70%;
 }
-.inline {
-  /* some other styles */
+.line-numbers {
+  width: 100%;
 }
+/* .inline {
+   some other styles 
+} */

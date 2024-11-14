@@ -6,11 +6,14 @@ export default function Code({ children, language = 'javascript', inline = false
     Prism.highlightAll();
   }, [children]);
 
+  if (inline) {
+    return <code className={`language-${language} code-inline`}>{children}</code>;
+  }
+
   return (
-    <div className={inline ? 'code-inline' : 'code-box'}>
-      <pre className={inline ? '' : 'line-numbers'}>
-        <code className={`language-${language}`}>arr.sort((a, b) => console.log(b - a));</code>
-        {/* <code className={`language-${language}`}>{children}</code> */}
+    <div className='code-box'>
+      <pre className='line-numbers'>
+        <code className={`language-${language}`}>{children}</code>
       </pre>
     </div>
   );

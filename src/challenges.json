@@ -3,14 +3,21 @@
     "level": "easy",
     "emoji": "🤖",
     "title": "First in line",
-    "description": "Sort the name of the students in alphabetical order - but from Z-A this time",
-    "data": "<Code>const arr = [\"Yelp\", \"Zipp It\", \"Grobo\", \"Aslan The Lion\", \"Flipper\", \"Questions Guy\", \"Besserwisser\"]; </Code>",
+    "description": "Sort the name of the students in alphabetical order - but from Z-A.",
+    "data": "const arr = [\n  \"Yelp\",\n  \"Zipp It\",\n  \"Grobo\",\n  \"Aslan The Lion\",\n  \"Flipper\",\n  \"Questions Guy\",\n  \"Besserwisser\"\n];",
+
     "clueEmoji": "🔎",
     "clues": [
-      "It is possible to solve this challenge with one super short line of code - don't overthink it.",
-      "The name of the array method is in the description.",
-      "If you want an item to show up first in the sorted array, adjust the sorting function so it’s prioritized, like with <Code>(a - b)</Code> or <Code>(b - a)</Code>."
+      {
+        "title": "Clue",
+        "clue": "It is possible to solve this challenge with one super short line of code - don't overthink it."
+      },
+      { "title": "Clue", "clue": "The name of the array method is in the description." },
+      {
+        "title": "Clue",
+        "clue": "If you want an item to show up first in the sorted array, adjust the sorting function so it’s prioritized, like with <Code>(a - b)</Code> or <Code>(b - a)</Code>."
+      }
     ],
-    "solution": "console.log()"
+    "solution": "arr.sort((a, b) => b - a);"
   }
 ]
