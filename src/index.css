@@ -23,6 +23,7 @@ button {
   font-family: 'Quicksand', sans-serif;
   font-weight: 600;
   letter-spacing: 0.02em;
+  line-height: 1.5em;
 }
 
 h1 {
@@ -41,7 +42,7 @@ h1 {
 
 .challenge {
   width: 700px;
-  margin: 0 3em;
+  margin: 0 3em 2em;
   padding: 1em 2em;
   background: #ffffe4;
   border: 2px solid #68d0bd;
@@ -123,13 +124,40 @@ h1 {
     box-shadow: 3px 4px 0 #891c29;
   }
 }
+.extra-credit p {
+  display: inline;
+}
+.extra-credit-label {
+  color: #ed5d40;
+  font-weight: 800;
+}
+.extra-credit {
+  padding: 0.5em 1em;
+  margin-bottom: 1.5em;
+  border: 2px solid #ed5d40;
+  border-radius: 1em;
+}
 
 .code-box {
-  max-width: 70%;
+  max-width: 85%;
+  min-width: 70%;
 }
 .line-numbers {
   width: 100%;
 }
-/* .inline {
-   some other styles 
-} */
+.code-inline {
+  /* width: fit-content; */
+  background-color: #2d2d2d;
+  color: #f8f8f2;
+  padding: 0.2em 0.4em;
+  border-radius: 0.3em;
+  font-size: 1rem;
+  font-weight: 400;
+  display: inline;
+  line-height: 1.1em;
+}
+
+::selection {
+  color: #ffffe4;
+  background-color: rgba(237, 93, 64, 0.7);
+}

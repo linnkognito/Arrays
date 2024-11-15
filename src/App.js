@@ -10,11 +10,11 @@ import 'prismjs/plugins/line-numbers/prism-line-numbers.css';
 
 //___F I L E S__________________________________//
 import './index.css';
+import { parseCodeTags, parseDescription } from './utils/helpers';
 import Code from './Code';
 import data from './challenges.json';
 
 ///////________________A P P________________///////
-
 export default function App() {
   useEffect(() => {
     Prism.highlightAll();
@@ -29,10 +29,10 @@ export default function App() {
 }
 
 ///////_________C H A L L E N G E S_________///////
-
 function ChallengesList() {
   const [isOpen, setIsOpen] = useState(null);
-  const handleClick = (num) => (isOpen === num ? setIsOpen(null) : setIsOpen(num));
+  const handleClick = (num) =>
+    isOpen === num ? setIsOpen(null) : setIsOpen(num);
 
   return (
     <div className='container'>
@@ -58,9 +58,18 @@ function Challenge({ num, isOpen, onClick, challenge }) {
         <h2>{`${challenge.emoji} ${challenge.title}`}</h2>
         <Button onClick={() => onClick(num)}>{open ? 'Close' : 'View'}</Button>
       </div>
+
       {open && (
         <>
-          <p>{challenge.description}</p>
+          {parseDescription(challenge.description)}
+
+          {challenge.extraCredit && (
+            <div className='extra-credit'>
+              <p className='extra-credit-label'>⭐ Extra credit: </p>
+              {parseDescription(challenge.extraCredit)}
+            </div>
+          )}
+
           <Code>{`${challenge.data}`}</Code>
           <Clues clues={challenge.clues} emoji={challenge.clueEmoji} />
           <Solution>{challenge.solution}</Solution>
@@ -71,7 +80,6 @@ function Challenge({ num, isOpen, onClick, challenge }) {
 }
 
 ///////______________C L U E S______________///////
-
 function Clues({ clues, emoji }) {
   const [showClues, setShowClues] = useState(false);
   const [isRevealed, setIsRevealed] = useState(null);
@@ -83,7 +91,9 @@ function Clues({ clues, emoji }) {
     <div className='clues'>
       <div className='clues-top'>
         <h3>🕵️‍♀️ Show clues</h3>
-        <Button onClick={handleToggleClues}>{showClues ? 'Close' : 'Show'}</Button>
+        <Button onClick={handleToggleClues}>
+          {showClues ? 'Close' : 'Show'}
+        </Button>
       </div>
       {showClues && (
         <div className='clues-container'>
@@ -92,7 +102,7 @@ function Clues({ clues, emoji }) {
               <p className='clue-title' onClick={() => handleRevealClue(i)}>
                 {`${emoji} ${clue.title} ${i + 1}`}
               </p>
-              {isRevealed === i && <p>{clue.clue}</p>}
+              {isRevealed === i && <p>{parseCodeTags(clue.clue)}</p>}
             </div>
           ))}
         </div>
@@ -102,7 +112,6 @@ function Clues({ clues, emoji }) {
 }
 
 ///////___________S O L U T I O N___________///////
-
 function Solution({ children }) {
   const [isOpen, setIsOpen] = useState(false);
   const handleToggleSolution = () => setIsOpen((open) => !open);
@@ -111,14 +120,16 @@ function Solution({ children }) {
     <div className='solution'>
       <div className='solution-top'>
         <h3>👩‍💻 Show solution</h3>
-        <Button onClick={handleToggleSolution}>{isOpen ? 'Close' : 'Show'}</Button>
+        <Button onClick={handleToggleSolution}>
+          {isOpen ? 'Close' : 'Show'}
+        </Button>
       </div>
       {isOpen && <Code>{children}</Code>}
     </div>
   );
 }
-///////___________R E U S A B L E___________///////
 
+///////___________R E U S A B L E___________///////
 function Button({ children, onClick }) {
   return (
     <button className='button' onClick={onClick}>

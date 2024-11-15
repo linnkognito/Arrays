@@ -1,6 +1,7 @@
 [
   {
     "level": "easy",
+    "method": "sort",
     "emoji": "🤖",
     "title": "First in line",
     "description": "Sort the name of the students in alphabetical order - but from Z-A.",
@@ -12,12 +13,94 @@
         "title": "Clue",
         "clue": "It is possible to solve this challenge with one super short line of code - don't overthink it."
       },
-      { "title": "Clue", "clue": "The name of the array method is in the description." },
+      {
+        "title": "Clue",
+        "clue": "The name of the array method is in the description."
+      },
       {
         "title": "Clue",
         "clue": "If you want an item to show up first in the sorted array, adjust the sorting function so it’s prioritized, like with <Code>(a - b)</Code> or <Code>(b - a)</Code>."
       }
     ],
     "solution": "arr.sort((a, b) => b - a);"
+  },
+  {
+    "level": "easy",
+    "method": "filter",
+    "emoji": "🧝🏿‍♂️",
+    "title": "They're fancy like that",
+    "description": "From the below list of users, return an array with only the premium account holders.\n Then, print the total amount of premium users with <Code>console.log</Code>.",
+    "data": "const users = [\n  { userName: 'SamwiseGamgee4ever', premium: false },\n  { userName: 'Gollum', premium: true },\n  { userName: 'L3g0lasBl0nde', premium: true },\n  { userName: 'Hobbits_have_more_fun', premium: false },\n  { userName: 'Dragonturd', premium: true }\n];",
+
+    "clueEmoji": "🔎",
+    "clues": [
+      {
+        "title": "Clue",
+        "clue": "This array method returns a new array."
+      },
+      {
+        "title": "Clue",
+        "clue": "For the second step you'll only need the name of the array + one magic word."
+      },
+      {
+        "title": "Clue",
+        "clue": "You want to apply a condition that checks what value the <Code>user.premium</Code> key has."
+      },
+      {
+        "title": "Clue",
+        "clue": "The array method starts with an F."
+      }
+    ],
+    "solution": "const vipNerds = users.filter((user) => user.premium === true);\nconsole.log(vipNerds.length);"
+  },
+  {
+    "level": "easy",
+    "method": "filter",
+    "emoji": "🎸",
+    "title": "Too old to die young",
+    "description": "Print an array with every age that's above 27.",
+    "data": "const ages = [12, 27, 89, 102, 21, 23, 54, 40, 77];",
+
+    "clueEmoji": "🔎",
+    "clues": [
+      {
+        "title": "Clue",
+        "clue": "Think of a method that sifts through the ages, keeping only the ones you want."
+      },
+      {
+        "title": "Clue",
+        "clue": "This method is used to only return the items in an array that meet certain conditions."
+      },
+      {
+        "title": "Clue",
+        "clue": "It's like a sieve but for arrays."
+      }
+    ],
+    "solution": "ages.filter((age) => age > 27);"
+  },
+  {
+    "level": "mid",
+    "method": "map",
+    "emoji": "🌏",
+    "title": "Hello world?",
+    "description": "Display the username, level and active status for every user in this array. Use a template literal to print the results to the console.",
+    "extraCredit": "Use HTML & DOM manipulation to print the results as an unordered list (or anything you want, the sky is the limit) instead.",
+    "data": "const superCoolUsers = [\n  { name: 'legoland', level: 12, active: true },\n  { name: 'iwannaspeaktothemanager', level: 1, active: true },\n  { name: 'coolmom68', level: 80, active: false },\n  { name: 'flapjack', level: 24, active: true },\n  { name: 'gothvibes', level: 66, active: false }\n];",
+    "clueEmoji": "🔎",
+    "clues": [
+      {
+        "title": "Clue",
+        "clue": "This method returns a new array with the result of applying a callback function to each item."
+      },
+      {
+        "title": "Clue",
+        "clue": "This method accepts 1-3 arguments: the element, the index & the array itself."
+      },
+      {
+        "title": "Clue",
+        "clue": "The emoji is sort of a clue."
+      }
+    ],
+    "solution": "superCoolUsers.map(user => { \n  console.log(\n    `${user.name},\n    ${user.level},\n    ${user.active ? 'active' : 'logged out'}`\n  )\n});"
   }
 ]
