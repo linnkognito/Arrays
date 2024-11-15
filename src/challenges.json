@@ -116,7 +116,7 @@
       "title": "📌 Remember: ",
       "content": "Make sure to check if the user even exists before trying to delete them."
     },
-    "data": "const someDudes = [\n  { id: '777948', name: 'dudelord', pw: 'ilovemyparrot' },\n  { id: '123_thatsallfolks', name: 'quitter_bro', \n    pw: '$jdJI98dKjre12%j,' },\n  { id: '411248', name: 'goblin-lyf', pw: 'itsjustaphase' },\n];",
+    "data": "const someDudes = [\n  { id: '777948', name: 'dudelord', pw: 'ilovemyparrot' },\n  { id: '123_thatsallfolks', name: 'quitter_bro', \n    pw: '$jdJI98dKjre12%j' },\n  { id: '411248', name: 'goblin-lyf', pw: 'itsjustaphase' },\n];",
     "clueEmoji": "🔎",
     "clues": [
       {
@@ -136,6 +136,6 @@
         "clue": "These two arguments mark the start and the end point."
       }
     ],
-    "solution": "superCoolUsers.map(user => { \n  console.log(\n    `${user.name},\n    ${user.level},\n    ${user.active ? 'active' : 'logged out'}`\n  )\n});"
+    "solution": "function deleteUser(arr, id) {\n  // Find the index\n  const index = arr.findIndex((user) => user.id === id);\n\n  // If there's no user with that id, -1 will be returned\n  if (index === -1) {\n    console.log('There is no user with this ID.');\n    return arr; // Return the unchanged array\n  }\n\n  // If the user exists, remove them permanently\n  arr.splice(index, 1);\n\n  // Return the updated array\n  return arr;\n}\n\ndeleteUser(someDudes, '123_thatsallfolks');"
   }
 ]
