@@ -35,6 +35,13 @@ h1 {
   text-shadow: -3px 3px 0 #891c29;
 }
 
+nav {
+  width: 500px;
+  padding: 0.2em;
+  background-color: #ffffe4;
+  border-radius: 1em;
+}
+
 .line-numbers {
   width: 400px;
   border-radius: 1em;

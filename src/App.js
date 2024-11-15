@@ -23,8 +23,17 @@ export default function App() {
   return (
     <div className='App'>
       <h1>[ Arrays ]</h1>
+      {/* <Nav /> */}
       <ChallengesList />
     </div>
+  );
+}
+
+function Nav() {
+  return (
+    <nav>
+      <Button cls={'button-blue'}>About</Button>
+    </nav>
   );
 }
 
@@ -130,9 +139,9 @@ function Solution({ children }) {
 }
 
 ///////___________R E U S A B L E___________///////
-function Button({ children, onClick }) {
+function Button({ children, onClick, cls }) {
   return (
-    <button className='button' onClick={onClick}>
+    <button className={`button ${cls || ''}`} onClick={onClick}>
       {children}
     </button>
   );
