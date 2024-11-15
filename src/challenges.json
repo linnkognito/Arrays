@@ -44,7 +44,7 @@
       },
       {
         "title": "Clue",
-        "clue": "You want to apply a condition that checks what value the <Code>user.premium</Code> key has."
+        "clue": "You want to apply a condition that checks what value <Code>user.premium</Code> has."
       },
       {
         "title": "Clue",
@@ -84,7 +84,7 @@
     "emoji": "🌏",
     "title": "Hello world?",
     "description": "Display the username, level and active status for every user in this array. Use a template literal to print the results to the console.",
-    "extraCredit": "Use HTML & DOM manipulation to print the results as an unordered list (or anything you want, the sky is the limit) instead.",
+    "extraCredit": "Use HTML & DOM manipulation to display the results as an unordered list (or anything you want, the sky is the limit) instead.",
     "data": "const superCoolUsers = [\n  { name: 'legoland', level: 12, active: true },\n  { name: 'iwannaspeaktothemanager', level: 1, active: true },\n  { name: 'coolmom68', level: 80, active: false },\n  { name: 'flapjack', level: 24, active: true },\n  { name: 'gothvibes', level: 66, active: false }\n];",
     "clueEmoji": "🔎",
     "clues": [

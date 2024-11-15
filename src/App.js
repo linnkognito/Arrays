@@ -23,17 +23,8 @@ export default function App() {
   return (
     <div className='App'>
       <h1>[ Arrays ]</h1>
-      {/* <Nav /> */}
       <ChallengesList />
     </div>
-  );
-}
-
-function Nav() {
-  return (
-    <nav>
-      <Button cls={'button-blue'}>About</Button>
-    </nav>
   );
 }
 
