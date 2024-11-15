@@ -84,7 +84,10 @@
     "emoji": "🌏",
     "title": "Hello world?",
     "description": "Display the username, level and active status for every user in this array. Use a template literal to print the results to the console.",
-    "extraCredit": "Use HTML & DOM manipulation to display the results as an unordered list (or anything you want, the sky is the limit) instead.",
+    "noteCard": {
+      "title": "⭐ Extra credit: ",
+      "content": "Use HTML & DOM manipulation to display the results as an unordered list (or anything you want, the sky is the limit) instead."
+    },
     "data": "const superCoolUsers = [\n  { name: 'legoland', level: 12, active: true },\n  { name: 'iwannaspeaktothemanager', level: 1, active: true },\n  { name: 'coolmom68', level: 80, active: false },\n  { name: 'flapjack', level: 24, active: true },\n  { name: 'gothvibes', level: 66, active: false }\n];",
     "clueEmoji": "🔎",
     "clues": [
@@ -99,6 +102,38 @@
       {
         "title": "Clue",
         "clue": "The emoji is sort of a clue."
+      }
+    ],
+    "solution": "superCoolUsers.map(user => { \n  console.log(\n    `${user.name},\n    ${user.level},\n    ${user.active ? 'active' : 'logged out'}`\n  )\n});"
+  },
+  {
+    "level": "mid",
+    "method": ["findIndex", "splice"],
+    "emoji": "🐔",
+    "title": "Flying the coop",
+    "description": "This challenge should be solved as a 2-step problem. You will create a function that uses one array method per step, and returns the modified array.\n\n 1. Obtain the index of the user with ID <Code>123_thatsallfolks</Code>\n\n 2. Permanently delete them from the array. You should edit the array in place (i.e. don't return a new array, but mutate the existing one).",
+    "noteCard": {
+      "title": "📌 Remember: ",
+      "content": "Make sure to check if the user even exists before trying to delete them."
+    },
+    "data": "const someDudes = [\n  { id: '777948', name: 'dudelord', pw: 'ilovemyparrot' },\n  { id: '123_thatsallfolks', name: 'quitter_bro', \n    pw: '$jdJI98dKjre12%j,' },\n  { id: '411248', name: 'goblin-lyf', pw: 'itsjustaphase' },\n];",
+    "clueEmoji": "🔎",
+    "clues": [
+      {
+        "title": "Clue",
+        "clue": "The first method's name consist of two words."
+      },
+      {
+        "title": "Clue",
+        "clue": "The second method name sounds kind of cool."
+      },
+      {
+        "title": "Clue",
+        "clue": "The second method accepts two arguments."
+      },
+      {
+        "title": "Clue",
+        "clue": "These two arguments mark the start and the end point."
       }
     ],
     "solution": "superCoolUsers.map(user => { \n  console.log(\n    `${user.name},\n    ${user.level},\n    ${user.active ? 'active' : 'logged out'}`\n  )\n});"

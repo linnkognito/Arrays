@@ -28,7 +28,7 @@ export default function App() {
   );
 }
 
-///////_________C H A L L E N G E S_________///////
+//___C H A L L E N G E S________________________//
 function ChallengesList() {
   const [isOpen, setIsOpen] = useState(null);
   const handleClick = (num) =>
@@ -62,14 +62,7 @@ function Challenge({ num, isOpen, onClick, challenge }) {
       {open && (
         <>
           {parseDescription(challenge.description)}
-
-          {challenge.extraCredit && (
-            <div className='extra-credit'>
-              <p className='extra-credit-label'>⭐ Extra credit: </p>
-              {parseDescription(challenge.extraCredit)}
-            </div>
-          )}
-
+          {challenge.noteCard && <NoteCard challenge={challenge} />}
           <Code>{`${challenge.data}`}</Code>
           <Clues clues={challenge.clues} emoji={challenge.clueEmoji} />
           <Solution>{challenge.solution}</Solution>
@@ -79,7 +72,16 @@ function Challenge({ num, isOpen, onClick, challenge }) {
   );
 }
 
-///////______________C L U E S______________///////
+function NoteCard({ challenge }) {
+  return (
+    <div className='note-card'>
+      <p className='note-card-label'>{challenge.noteCard.title}</p>
+      {parseDescription(challenge.noteCard.content)}
+    </div>
+  );
+}
+
+//___C L U E S__________________________________//
 function Clues({ clues, emoji }) {
   const [showClues, setShowClues] = useState(false);
   const [isRevealed, setIsRevealed] = useState(null);
@@ -89,12 +91,13 @@ function Clues({ clues, emoji }) {
 
   return (
     <div className='clues'>
-      <div className='clues-top'>
-        <h3>🕵️‍♀️ Show clues</h3>
-        <Button onClick={handleToggleClues}>
-          {showClues ? 'Close' : 'Show'}
-        </Button>
-      </div>
+      <SectionHeader
+        className='clues-top'
+        title='🕵️‍♀️ Show clues'
+        onToggle={handleToggleClues}
+        isShown={showClues}
+      ></SectionHeader>
+
       {showClues && (
         <div className='clues-container'>
           {clues.map((clue, i) => (
@@ -111,25 +114,41 @@ function Clues({ clues, emoji }) {
   );
 }
 
-///////___________S O L U T I O N___________///////
+//___S O L U T I O N____________________________//
 function Solution({ children }) {
   const [isOpen, setIsOpen] = useState(false);
   const handleToggleSolution = () => setIsOpen((open) => !open);
 
   return (
     <div className='solution'>
-      <div className='solution-top'>
-        <h3>👩‍💻 Show solution</h3>
-        <Button onClick={handleToggleSolution}>
-          {isOpen ? 'Close' : 'Show'}
-        </Button>
-      </div>
+      <SectionHeader
+        className='solution-top'
+        title='👩‍💻 Show solution'
+        onToggle={handleToggleSolution}
+        isShown={isOpen}
+      />
+
       {isOpen && <Code>{children}</Code>}
     </div>
   );
 }
 
-///////___________R E U S A B L E___________///////
+//___R E U S A B L E____________________________//
+function SectionHeader({
+  className = '',
+  title,
+  onToggle,
+  isShown = false,
+  btnShow = 'Show',
+  btnHide = 'Close',
+}) {
+  return (
+    <div className={className}>
+      <h3>{title}</h3>
+      <Button onClick={() => onToggle()}>{isShown ? btnHide : btnShow}</Button>
+    </div>
+  );
+}
 function Button({ children, onClick, cls }) {
   return (
     <button className={`button ${cls || ''}`} onClick={onClick}>

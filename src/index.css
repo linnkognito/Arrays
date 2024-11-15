@@ -131,14 +131,14 @@ nav {
     box-shadow: 3px 4px 0 #891c29;
   }
 }
-.extra-credit p {
+.note-card p {
   display: inline;
 }
-.extra-credit-label {
+.note-card-label {
   color: #ed5d40;
   font-weight: 800;
 }
-.extra-credit {
+.note-card {
   padding: 0.5em 1em;
   margin-bottom: 1.5em;
   border: 2px solid #ed5d40;
@@ -164,6 +164,12 @@ nav {
   line-height: 1.1em;
 }
 
+pre[class*='language-'],
+code[class*='language-'] {
+  max-width: 100%;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
 ::selection {
   color: #ffffe4;
   background-color: rgba(237, 93, 64, 0.7);
