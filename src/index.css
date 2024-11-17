@@ -3,11 +3,6 @@ body {
   color: rgb(35, 21, 5);
   background-color: #44838f;
 }
-/* * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-} */
 .App {
   display: flex;
   flex-direction: column;
@@ -25,8 +20,8 @@ button {
   letter-spacing: 0.02em;
   line-height: 1.5em;
 }
-
 h1 {
+  margin-bottom: 0.3em;
   text-align: center;
   font-family: 'Shrikhand', serif;
   font-size: 4rem;
@@ -34,7 +29,6 @@ h1 {
   color: #ed5d40;
   text-shadow: -3px 3px 0 #891c29;
 }
-
 nav {
   width: 500px;
   padding: 0.2em;
@@ -42,9 +36,46 @@ nav {
   border-radius: 1em;
 }
 
+.about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 600px;
+  margin-bottom: 2em;
+  padding: 1em;
+  background-color: #90d0c4;
+  border: 2px dotted #ffffe4;
+  border-radius: 1em;
+  box-shadow: 2px 2px 0 #ffffe4;
+}
+.text-container {
+  width: 85%;
+  margin: auto;
+}
+.intro {
+  padding-bottom: 0.5em;
+  font-weight: 800;
+  color: #ffffe4;
+}
+.about p {
+  text-align: justify;
+  display: inline-flex;
+  align-items: center;
+  margin: 0;
+  line-height: 1.5em;
+}
+
 .line-numbers {
   width: 400px;
   border-radius: 1em;
+}
+
+.challenge-top,
+.clues-top,
+.solution-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .challenge {
@@ -56,18 +87,9 @@ nav {
   border-radius: 1em;
   box-shadow: -6px 6px 0 #68d0bd;
 }
-
 .challenge h2 {
   letter-spacing: 0.2em;
   color: #ed5d40;
-}
-
-.challenge-top,
-.clues-top,
-.solution-top {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
 }
 
 .clues {
@@ -76,7 +98,6 @@ nav {
   border: 2px dashed #ed5d40;
   border-radius: 1em;
 }
-
 .clues-container {
   display: flex;
   flex-direction: column;
@@ -105,6 +126,11 @@ nav {
   border-radius: 1em;
   background-color: #ffffe4;
   border: 2px solid #ed5d40;
+  transition: transform 0.1s ease-in;
+
+  &:hover {
+    transform: scale(1.01);
+  }
 }
 
 .solution {
@@ -114,23 +140,7 @@ nav {
   border: 2px solid #ed5d40;
   border-radius: 1em;
 }
-.button {
-  min-width: 5em;
-  padding: 0.4em 0.2em;
-  font-size: 1rem;
-  color: #ffffe4;
-  background-color: #ed5d40;
-  border: 2px solid #891c29;
-  border-radius: 1em;
-  box-shadow: 2px 2px 0 #891c29;
-  cursor: pointer;
-  transition: all 0.2s ease-in;
 
-  &:hover {
-    margin-right: 0.1em;
-    box-shadow: 3px 4px 0 #891c29;
-  }
-}
 .note-card p {
   display: inline;
 }
@@ -153,23 +163,57 @@ nav {
   width: 100%;
 }
 .code-inline {
-  /* width: fit-content; */
-  background-color: #2d2d2d;
-  color: #f8f8f2;
+  display: inline;
   padding: 0.2em 0.4em;
-  border-radius: 0.3em;
   font-size: 1rem;
   font-weight: 400;
-  display: inline;
   line-height: 1.1em;
+  color: #f8f8f2;
+  background-color: #2d2d2d;
+  border-radius: 0.3em;
 }
-
 pre[class*='language-'],
 code[class*='language-'] {
   max-width: 100%;
   white-space: pre-wrap;
   word-break: break-word;
 }
+
+.button {
+  min-width: 5em;
+  padding: 0.4em 0.2em;
+  font-size: 1rem;
+  color: #ffffe4;
+  background-color: #ed5d40;
+  border: 2px solid #891c29;
+  border-radius: 1em;
+  box-shadow: 2px 2px 0 #891c29;
+  cursor: pointer;
+  transition: all 0.2s ease-in;
+
+  &:hover {
+    margin-right: 0.1em;
+    box-shadow: 3px 4px 0 #891c29;
+  }
+}
+.button-small {
+  min-width: 5em;
+  margin-left: 0.5em;
+  font-size: 0.7rem;
+  color: #ffffe4;
+  background-color: #ed5d40;
+  border: 2px solid #891c29;
+  border-radius: 1em;
+  box-shadow: 2px 2px 0 #891c29;
+  cursor: pointer;
+  transition: all 0.2s ease-in;
+
+  &:hover {
+    margin-left: 0.3em;
+    box-shadow: -2px 3px 0 #891c29;
+  }
+}
+
 ::selection {
   color: #ffffe4;
   background-color: rgba(237, 93, 64, 0.7);

@@ -11,14 +11,3 @@ root.render(
     <App />
   </StrictMode>
 );
-
-const arr = [
-  'Yelp',
-  'Zipp It',
-  'Grobo',
-  'Aslan The Lion',
-  'Flipper',
-  'Questions Guy',
-  'Besserwisser',
-];
-console.log(arr.sort((a, b) => b - a));

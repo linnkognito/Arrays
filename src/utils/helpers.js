@@ -20,7 +20,7 @@ export function parseCodeTags(text) {
   return parts;
 }
 
-export function parseDescription(description) {
+export function parseText(description) {
   if (!description) return null;
   return description
     .split('\n\n')
