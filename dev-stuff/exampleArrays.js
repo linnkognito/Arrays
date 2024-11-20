@@ -42,4 +42,6 @@ function deleteUser(arr, id) {
   return arr;
 }
 
-deleteUser(someDudes, '123_thatsallfolks');
+const checkIfArray = [1, 2, 3, 'Go', '!'];
+
+console.log(Array.isArray(checkIfArray));

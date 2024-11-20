@@ -137,5 +137,37 @@
       }
     ],
     "solution": "function deleteUser(arr, id) {\n  // Find the index\n  const index = arr.findIndex((user) => user.id === id);\n\n  // If there's no user with that id, -1 will be returned\n  if (index === -1) {\n    console.log('There is no user with this ID.');\n    return arr; // Return the unchanged array\n  }\n\n  // If the user exists, remove them permanently\n  arr.splice(index, 1);\n\n  // Return the updated array\n  return arr;\n}\n\ndeleteUser(someDudes, '123_thatsallfolks');"
+  },
+  {
+    "level": "easy",
+    "method": ["isArray"],
+    "emoji": "🤔",
+    "title": "Just tell me what it is",
+    "description": "Check if <Code>checkIfArray</Code> is an array.",
+    "noteCard": {
+      "title": "🛑 Nope: ",
+      "content": "You can not use <Code>typeof</Code> for this. It isn't reliable since it considers arrays & objects to be the same."
+    },
+    "data": "const checkIfArray = [1, 2, 3, 'Go', '!'];",
+    "clueEmoji": "🔎",
+    "clues": [
+      {
+        "title": "Clue",
+        "clue": "This method returns a boolean value."
+      },
+      {
+        "title": "Clue",
+        "clue": "Instead if being chained to the array, this method takes the array as its argument."
+      },
+      {
+        "title": "Clue",
+        "clue": "You need tho chain this method to the global object <Code>Array</Code> first, in order to use it."
+      },
+      {
+        "title": "Clue",
+        "clue": "If you use this method right, the line of code (array method + array name) will sort of read like real scentence."
+      }
+    ],
+    "solution": "function deleteUser(arr, id) {\n  // Find the index\n  const index = arr.findIndex((user) => user.id === id);\n\n  // If there's no user with that id, -1 will be returned\n  if (index === -1) {\n    console.log('There is no user with this ID.');\n    return arr; // Return the unchanged array\n  }\n\n  // If the user exists, remove them permanently\n  arr.splice(index, 1);\n\n  // Return the updated array\n  return arr;\n}\n\ndeleteUser(someDudes, '123_thatsallfolks');"
   }
 ]

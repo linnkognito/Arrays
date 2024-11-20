@@ -69,7 +69,6 @@ nav {
   width: 400px;
   border-radius: 1em;
 }
-
 .challenge-top,
 .clues-top,
 .solution-top {
@@ -77,7 +76,6 @@ nav {
   align-items: center;
   justify-content: space-between;
 }
-
 .challenge {
   width: 700px;
   margin: 0 3em 2em;
@@ -155,30 +153,6 @@ nav {
   border-radius: 1em;
 }
 
-.code-box {
-  max-width: 85%;
-  min-width: 70%;
-}
-.line-numbers {
-  width: 100%;
-}
-.code-inline {
-  display: inline;
-  padding: 0.2em 0.4em;
-  font-size: 1rem;
-  font-weight: 400;
-  line-height: 1.1em;
-  color: #f8f8f2;
-  background-color: #2d2d2d;
-  border-radius: 0.3em;
-}
-pre[class*='language-'],
-code[class*='language-'] {
-  max-width: 100%;
-  white-space: pre-wrap;
-  word-break: break-word;
-}
-
 .button {
   min-width: 5em;
   padding: 0.4em 0.2em;
@@ -213,8 +187,62 @@ code[class*='language-'] {
     box-shadow: -2px 3px 0 #891c29;
   }
 }
+.button-nav {
+  min-width: 5em;
+  padding: 0.4em 0.2em;
+  font-size: 1rem;
+  color: #ffffe4;
+  background-color: #ed5d40;
+  border: 2px solid #891c29;
+  border-radius: 1em;
+  box-shadow: 2px 2px 0 #891c29;
+  cursor: pointer;
+  transition: all 0.2s ease-in;
+
+  &:hover {
+    margin-right: 0.1em;
+    box-shadow: 3px 4px 0 #891c29;
+  }
+}
 
 ::selection {
   color: #ffffe4;
   background-color: rgba(237, 93, 64, 0.7);
+}
+
+/* C o d e  e d i t o r ~ ( P r i s m  s t y l e s ) */
+.editor::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+.editor::-webkit-scrollbar-thumb {
+  background: #66d9ef;
+  border-radius: 10px;
+  border: 2px solid #2b2b2b;
+}
+.editor::-webkit-scrollbar-track {
+  background: #ed5d40;
+  border-radius: 10px;
+}
+.editor::-webkit-scrollbar-thumb:hover {
+  background: #ffffe4;
+}
+.editor::-webkit-scrollbar-thumb:active {
+  background: #66d9ef;
+}
+
+.editor {
+  position: relative;
+  min-height: 400px;
+  margin: 1em 0;
+  padding: 1em;
+  font-family: 'Fira Code', monospace;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: transparent;
+  background-color: #2d2d2d;
+  /* border: 3px solid #68d0bd; */
+  border-radius: 1em;
+  /* box-shadow: 0 0 5px #44838f; */
+  overflow: auto;
 }

@@ -1,18 +1,19 @@
 ///////____________I M P O R T S____________///////
 import React, { useState, useEffect } from 'react';
+import { parseCodeTags, parseText } from './utils/helpers';
 
 //___L I B R A R I E S__________________________//
 import { v4 as uuidv4 } from 'uuid';
 import Prism from 'prismjs';
 import 'prismjs/themes/prism-tomorrow.css';
 import 'prismjs/components/prism-javascript';
-import 'prismjs/plugins/line-numbers/prism-line-numbers.css';
+// import 'prismjs/plugins/line-numbers/prism-line-numbers.css';
 
 //___F I L E S__________________________________//
 import './index.css';
-import { parseCodeTags, parseText } from './utils/helpers';
 import Code from './Code';
 import data from './dev-data/challenges.json';
+import CodeEditor from './CodeEditor';
 
 ///////________________A P P________________///////
 export default function App() {
@@ -23,7 +24,7 @@ export default function App() {
   return (
     <div className='App'>
       <h1>[ Arrays ]</h1>
-
+      {/* <NavBar /> */}
       <About collapsedNumWords={18}>
         <p>
           Designed for JavaScript beginners & other cool nerds, this app is a
@@ -50,6 +51,34 @@ export default function App() {
     </div>
   );
 }
+
+//___N A V______________________________________//
+// function NavBar() {
+//   const [activeLink, setActiveLink] = useState(null);
+//   const navLinks = [
+//     { id: uuidv4(), title: 'About' },
+//     { id: uuidv4(), title: 'Methods List' },
+//     { id: uuidv4(), title: 'Tips & Tricks' },
+//   ];
+
+//   useEffect(() => {
+//     if (activeLink) document.title = `[ Arrays ] - ${activeLink.title}`;
+
+//     return () => (document.title = '[ Arrays ]');
+//   }, [activeLink]);
+
+//   return (
+//     <nav>
+//       <ul>
+//         {navLinks.map((li) => (
+//           <li key={li.id} onClick={() => setActiveLink(li)}>
+//             {li.title}
+//           </li>
+//         ))}
+//       </ul>
+//     </nav>
+//   );
+// }
 
 //___A B O U T__________________________________//
 function About({
@@ -123,7 +152,12 @@ function ChallengesList() {
 }
 
 function Challenge({ num, isOpen, onClick, challenge }) {
+  const [showEditor, setShowEditor] = useState(false);
   const open = num === isOpen;
+
+  function handleShowEditor() {
+    setShowEditor((shown) => !shown);
+  }
 
   return (
     <div className='challenge'>
@@ -137,6 +171,11 @@ function Challenge({ num, isOpen, onClick, challenge }) {
           {parseText(challenge.description)}
           {challenge.noteCard && <NoteCard challenge={challenge} />}
           <Code>{`${challenge.data}`}</Code>
+          <Button className={'button-small'} onClick={handleShowEditor}>
+            Code editor
+          </Button>
+
+          {showEditor && <CodeEditor />}
           <Clues clues={challenge.clues} emoji={challenge.clueEmoji} />
           <Solution>{challenge.solution}</Solution>
         </>
@@ -222,9 +261,9 @@ function SectionHeader({
     </div>
   );
 }
-function Button({ children, onClick, cls }) {
+function Button({ children, onClick, className = 'button' }) {
   return (
-    <button className={`button ${cls || ''}`} onClick={onClick}>
+    <button className={className} onClick={onClick}>
       {children}
     </button>
   );
