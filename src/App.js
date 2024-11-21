@@ -24,8 +24,8 @@ export default function App() {
   return (
     <div className='App'>
       <h1>[ Arrays ]</h1>
-      {/* <NavBar /> */}
-      <About collapsedNumWords={18}>
+      <NavBar />
+      {/* <About collapsedNumWords={18}>
         <p>
           Designed for JavaScript beginners & other cool nerds, this app is a
           playground to put your array manipulation skills to the test.
@@ -45,7 +45,7 @@ export default function App() {
         </p>
 
         <p>Pat yourself on the back & keep on hackin’.</p>
-      </About>
+      </About> */}
 
       <ChallengesList />
     </div>
@@ -53,32 +53,35 @@ export default function App() {
 }
 
 //___N A V______________________________________//
-// function NavBar() {
-//   const [activeLink, setActiveLink] = useState(null);
-//   const navLinks = [
-//     { id: uuidv4(), title: 'About' },
-//     { id: uuidv4(), title: 'Methods List' },
-//     { id: uuidv4(), title: 'Tips & Tricks' },
-//   ];
+function NavBar() {
+  const [activeLink, setActiveLink] = useState(null);
+  const navLinks = [
+    { id: uuidv4(), title: 'About' },
+    { id: uuidv4(), title: 'Methods' },
+    { id: uuidv4(), title: 'Quiz' },
+    { id: uuidv4(), title: 'Tips & Tricks' },
+  ];
 
-//   useEffect(() => {
-//     if (activeLink) document.title = `[ Arrays ] - ${activeLink.title}`;
+  useEffect(() => {
+    if (activeLink) document.title = `[ Arrays ] - ${activeLink.title}`;
 
-//     return () => (document.title = '[ Arrays ]');
-//   }, [activeLink]);
+    return () => (document.title = '[ Arrays ]');
+  }, [activeLink]);
 
-//   return (
-//     <nav>
-//       <ul>
-//         {navLinks.map((li) => (
-//           <li key={li.id} onClick={() => setActiveLink(li)}>
-//             {li.title}
-//           </li>
-//         ))}
-//       </ul>
-//     </nav>
-//   );
-// }
+  return (
+    <nav>
+      {navLinks.map((btn) => (
+        <Button
+          className='button-nav'
+          key={btn.id}
+          onClick={() => setActiveLink(btn)}
+        >
+          {btn.title}
+        </Button>
+      ))}
+    </nav>
+  );
+}
 
 //___A B O U T__________________________________//
 function About({

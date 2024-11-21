@@ -21,19 +21,25 @@ button {
   line-height: 1.5em;
 }
 h1 {
-  margin-bottom: 0.3em;
+  margin-bottom: 0.1em;
   text-align: center;
   font-family: 'Shrikhand', serif;
   font-size: 4rem;
   letter-spacing: 0.2em;
   color: #ed5d40;
-  text-shadow: -3px 3px 0 #891c29;
+  text-shadow: 3px 3px 0 #891c29;
 }
 nav {
-  width: 500px;
-  padding: 0.2em;
-  background-color: #ffffe4;
+  display: flex;
+  gap: 1.5em;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2em;
+  padding: 0.7em 1em;
+  /* background-color: #ffffe4; */
+  /* border: 2px dashed #68d0bd;
   border-radius: 1em;
+  box-shadow: 6px 6px 0 #68d0bd; */
 }
 
 .about {
@@ -65,10 +71,12 @@ nav {
   line-height: 1.5em;
 }
 
+/* C o d e  e x a m p l e s */
 .line-numbers {
-  width: 400px;
+  width: 80%;
   border-radius: 1em;
 }
+
 .challenge-top,
 .clues-top,
 .solution-top {
@@ -83,7 +91,7 @@ nav {
   background: #ffffe4;
   border: 2px solid #68d0bd;
   border-radius: 1em;
-  box-shadow: -6px 6px 0 #68d0bd;
+  box-shadow: 6px 6px 0 #68d0bd;
 }
 .challenge h2 {
   letter-spacing: 0.2em;
@@ -153,9 +161,10 @@ nav {
   border-radius: 1em;
 }
 
+/* B u t t o n s */
 .button {
   min-width: 5em;
-  padding: 0.4em 0.2em;
+  padding: 0.4em 0.5em;
   font-size: 1rem;
   color: #ffffe4;
   background-color: #ed5d40;
@@ -189,19 +198,21 @@ nav {
 }
 .button-nav {
   min-width: 5em;
-  padding: 0.4em 0.2em;
   font-size: 1rem;
-  color: #ffffe4;
-  background-color: #ed5d40;
-  border: 2px solid #891c29;
+  font-weight: 800;
+  padding: 0.2em 0.8em;
+  letter-spacing: 0.2em;
+  color: #2a555e;
+  background-color: #ffffe4;
+  border: 2px solid #66d9ef;
   border-radius: 1em;
-  box-shadow: 2px 2px 0 #891c29;
+  box-shadow: 2px 2px 0 #66d9ef;
   cursor: pointer;
   transition: all 0.2s ease-in;
 
   &:hover {
     margin-right: 0.1em;
-    box-shadow: 3px 4px 0 #891c29;
+    box-shadow: 3px 4px 0 #66d9ef;
   }
 }
 
@@ -210,7 +221,7 @@ nav {
   background-color: rgba(237, 93, 64, 0.7);
 }
 
-/* C o d e  e d i t o r ~ ( P r i s m  s t y l e s ) */
+/* C o d e  e d i t o r */
 .editor::-webkit-scrollbar {
   width: 12px;
   height: 12px;
@@ -241,8 +252,6 @@ nav {
   line-height: 1.5;
   color: transparent;
   background-color: #2d2d2d;
-  /* border: 3px solid #68d0bd; */
   border-radius: 1em;
-  /* box-shadow: 0 0 5px #44838f; */
   overflow: auto;
 }
