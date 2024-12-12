@@ -4,7 +4,7 @@ import { EditorState } from '@codemirror/state';
 import { xcodeDark } from '@uiw/codemirror-theme-xcode';
 import { javascript } from '@codemirror/lang-javascript';
 
-export default function CodeEditor({ className }) {
+export default function CodeEditor() {
   const [code, setCode] = useState('// Start hacking');
 
   return (

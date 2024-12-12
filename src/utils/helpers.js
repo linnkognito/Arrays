@@ -1,4 +1,4 @@
-import Code from '../Code';
+import Code from '../components/Code';
 
 export function parseCodeTags(text) {
   const codeRegex = /<Code>(.*?)<\/Code>/g;
