@@ -52,7 +52,7 @@ function QuizContainer() {
         </div>
       )}
 
-      {status === 'finish' && <FinishScreen />}
+      {status === 'finished' && <FinishScreen />}
     </div>
   );
 }

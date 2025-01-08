@@ -38,10 +38,10 @@ function reducer(state, action) {
     case 'nextQuestion':
       return { ...state, index: state.index + 1, answer: null };
 
-    case 'finish':
+    case 'finished':
       return {
         ...state,
-        status: 'finish',
+        status: 'finished',
         highscore:
           state.points > state.highscore ? state.points : state.highscore,
       };
@@ -51,6 +51,9 @@ function reducer(state, action) {
         ...state,
         status: 'ready',
         questions: state.questions,
+        index: 0,
+        answer: null,
+        points: 0,
       };
 
     default:

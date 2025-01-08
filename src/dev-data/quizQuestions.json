@@ -2,79 +2,79 @@
   "questions": [
     {
       "id": 1,
-      "question": "What method adds one or more elements to the end of an array and returns the new length of the array?",
+      "question": "What method adds one or more elements to the end of an array?",
       "answers": [
-        { "id": 1, "answer": "push()" },
-        { "id": 2, "answer": "pop()" },
-        { "id": 3, "answer": "shift()" },
-        { "id": 4, "answer": "unshift()" }
+        { "id": 1, "answer": "pop()" },
+        { "id": 2, "answer": "shift()" },
+        { "id": 3, "answer": "unshift()" },
+        { "id": 4, "answer": "push()" }
       ],
-      "correctAnswer": 1
+      "correctAnswer": 4
     },
     {
       "id": 2,
       "question": "How do you create a new array that includes the elements of an existing array?",
       "answers": [
-        { "id": 1, "answer": "Using the slice() method" },
-        { "id": 2, "answer": "Using the splice() method" },
+        { "id": 1, "answer": "Using the splice() method" },
+        { "id": 2, "answer": "Using the slice() method" },
         { "id": 3, "answer": "Using the split() method" },
         { "id": 4, "answer": "Using the append() method" }
       ],
-      "correctAnswer": 1
+      "correctAnswer": 2
     },
     {
       "id": 3,
-      "question": "Which method removes the first element from an array and returns that removed element?",
+      "question": "Which method removes the first element from an array and returns it?",
       "answers": [
-        { "id": 1, "answer": "shift()" },
-        { "id": 2, "answer": "pop()" },
         { "id": 3, "answer": "splice()" },
-        { "id": 4, "answer": "slice()" }
+        { "id": 4, "answer": "slice()" },
+        { "id": 2, "answer": "pop()" },
+        { "id": 1, "answer": "shift()" }
       ],
       "correctAnswer": 1
     },
     {
       "id": 4,
-      "question": "What does the method 'Array.map()' return?",
+      "question": "What does this method return? `Array.map()`",
       "answers": [
-        {
-          "id": 1,
-          "answer": "A new array with the same elements in reverse order"
-        },
         {
           "id": 2,
           "answer": "A new array with each element transformed by a callback function"
         },
+        {
+          "id": 4,
+          "answer": "A new array with the same elements in reverse order"
+        },
         { "id": 3, "answer": "The sum of all array elements" },
-        { "id": 4, "answer": "The original array without modification" }
+        { "id": 1, "answer": "The original array without modification" }
       ],
       "correctAnswer": 2
     },
     {
       "id": 5,
-      "question": "Which of the following methods can be used to flatten an array in modern JavaScript?",
+      "question": "Which method is used to combine nested arrays into the parent array",
       "answers": [
-        { "id": 1, "answer": "flat()" },
-        { "id": 2, "answer": "join()" },
-        { "id": 3, "answer": "concat()" },
-        { "id": 4, "answer": "reduce()" }
+        { "id": 1, "answer": "reduce()" },
+        { "id": 2, "answer": "concat()" },
+        { "id": 3, "answer": "join()" },
+        { "id": 4, "answer": "flat()" }
       ],
-      "correctAnswer": 1
+      "correctAnswer": 4
     },
     {
       "id": 6,
-      "question": "What method can you use to check if an array includes a certain value?",
+      "question": "What method checks if an array contains a specific value?",
       "answers": [
-        { "id": 1, "answer": "indexOf()" },
-        { "id": 2, "answer": "contains()" },
         { "id": 3, "answer": "includes()" },
-        { "id": 4, "answer": "some()" }
+        { "id": 4, "answer": "some()" },
+        { "id": 2, "answer": "contains()" },
+        { "id": 1, "answer": "indexOf()" }
       ],
       "correctAnswer": 3
     },
     {
       "id": 7,
-      "question": "What will the following code output: [1, 2, 3].reduce((acc, curr) => acc + curr, 0)?",
+      "question": "What will the following code output: `[1, 2, 3].reduce((acc, curr) => acc + curr, 0)?`",
       "answers": [
         { "id": 1, "answer": "6" },
         { "id": 2, "answer": "123" },
@@ -85,18 +85,18 @@
     },
     {
       "id": 8,
-      "question": "Which method would you use to add elements to the beginning of an array?",
+      "question": "How do you transform a string into an array of substrings, separated by a specific character?",
       "answers": [
-        { "id": 1, "answer": "push()" },
+        { "id": 1, "answer": "slice()" },
         { "id": 2, "answer": "pop()" },
-        { "id": 3, "answer": "unshift()" },
-        { "id": 4, "answer": "concat()" }
+        { "id": 3, "answer": "split()" },
+        { "id": 4, "answer": "isArray()" }
       ],
       "correctAnswer": 3
     },
     {
       "id": 9,
-      "question": "What is the output of: [1, 2, 3].find(x => x > 2)?",
+      "question": "What will be the output? `[1, 2, 3].find(x => x > 2)`",
       "answers": [
         { "id": 1, "answer": "1" },
         { "id": 2, "answer": "2" },
@@ -109,12 +109,12 @@
       "id": 10,
       "question": "Which array method is used to sort the elements of an array in place?",
       "answers": [
-        { "id": 1, "answer": "sort()" },
+        { "id": 1, "answer": "reverse()" },
         { "id": 2, "answer": "reduce()" },
         { "id": 3, "answer": "filter()" },
-        { "id": 4, "answer": "reverse()" }
+        { "id": 4, "answer": "sort()" }
       ],
-      "correctAnswer": 1
+      "correctAnswer": 4
     }
   ]
 }

@@ -9,7 +9,7 @@ function QuizFooter() {
     if (index < numQuestions - 1) {
       dispatch({ type: 'nextQuestion' });
     } else {
-      dispatch({ type: 'finish' });
+      dispatch({ type: 'finished' });
     }
   }
 
@@ -18,7 +18,7 @@ function QuizFooter() {
       <p className='max-h-fit'>{`${index + 1}/${numQuestions}`}</p>
 
       <Button onClick={handleNext} disabled={!hasAnswered}>
-        Next
+        {index === numQuestions - 1 ? 'Complete' : 'Next'}
       </Button>
     </div>
   );
