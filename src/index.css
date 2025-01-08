@@ -358,3 +358,39 @@ nav {
   background-color: #ed5d40;
   border: 2px solid #891c29;
 }
+
+/* P r o g r e s s  B a r */
+progress {
+  width: 100%;
+  height: 1rem;
+  margin: auto;
+  appearance: none;
+  background-color: rgba(104, 208, 189, 0.5);
+  border: 2px solid #44838f;
+  border-radius: 1em;
+}
+
+/* Chrome, Safari, Edge */
+progress::-webkit-progress-bar {
+  background-color: rgba(104, 208, 189, 0.5);
+}
+
+progress::-webkit-progress-value {
+  background-color: #44838f;
+  border-radius: 1em;
+  transition: width 0.3s ease;
+}
+
+/* Firefox */
+progress::-moz-progress-bar {
+  background-color: #44838f;
+  border-radius: 1em;
+  transition: width 0.3s ease;
+}
+
+/* Internet Explorer */
+progress::-ms-fill {
+  background-color: #44838f;
+  border-radius: 1em;
+  transition: width 0.3s ease;
+}
