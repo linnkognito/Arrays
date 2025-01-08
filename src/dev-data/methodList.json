@@ -1,0 +1,233 @@
+[
+  {
+    "name": "🫸push",
+    "description": "Adds element(s) to the end of an array",
+    "syntax": "arr.push(element1, ..., elementN);",
+    "returns": "New length of the array",
+    "accepts": "One or more elements to add"
+  },
+  {
+    "name": "🎈pop",
+    "description": "Removes the last element from the array",
+    "syntax": "arr.pop();",
+    "returns": "The removed element",
+    "accepts": "None"
+  },
+  {
+    "name": "➕unshift",
+    "description": "Adds element(s) to the beginning of the array",
+    "syntax": "arr.unshift(element1, ..., elementN);",
+    "returns": "New length of the array",
+    "accepts": "One or more elements to add"
+  },
+  {
+    "name": "➖shift",
+    "description": "Removes the first element from the array",
+    "syntax": "arr.shift();",
+    "returns": "The removed element",
+    "accepts": "None"
+  },
+  {
+    "name": "🗑️splice",
+    "description": "Adds/removes elements at a specific index",
+    "syntax": "arr.splice(start, deleteCount, item1, ..., itemN);",
+    "returns": "An array of removed elements",
+    "accepts": "Start index, delete count, and elements to add"
+  },
+  {
+    "name": "🍰slice",
+    "description": "Returns a shallow copy of a portion of the array",
+    "syntax": "arr.slice(start, end);",
+    "returns": "A new array",
+    "accepts": "Start and end indices (end is exclusive)"
+  },
+  {
+    "name": "🔗concat",
+    "description": "Merges two or more arrays into a new array",
+    "syntax": "arr.concat(array1, ..., arrayN);",
+    "returns": "A new array",
+    "accepts": "One or more arrays or values"
+  },
+  {
+    "name": "🔢indexOf",
+    "description": "Returns the first index of the element, or -1 if not found",
+    "syntax": "arr.indexOf(searchElement, fromIndex);",
+    "returns": "The index of the element",
+    "accepts": "Search element and optional starting index"
+  },
+  {
+    "name": "🔚lastIndexOf",
+    "description": "Returns the last index of the element, or -1 if not found",
+    "syntax": "arr.lastIndexOf(searchElement, fromIndex);",
+    "returns": "The index of the element",
+    "accepts": "Search element and optional starting index"
+  },
+  {
+    "name": "👯includes",
+    "description": "Checks if an element exists in the array",
+    "syntax": "arr.includes(searchElement, fromIndex);",
+    "returns": "true or false",
+    "accepts": "Search element and optional starting index"
+  },
+  {
+    "name": "🔍find",
+    "description": "Returns the first element that satisfies the condition",
+    "syntax": "arr.find(callback, thisArg);",
+    "returns": "The element if found, otherwise undefined",
+    "accepts": "Callback function and optional thisArg"
+  },
+  {
+    "name": "🗂️findIndex",
+    "description": "Returns the index of the first element that satisfies the condition",
+    "syntax": "arr.findIndex(callback, thisArg);",
+    "returns": "The index if found, otherwise -1",
+    "accepts": "Callback function and optional thisArg"
+  },
+  {
+    "name": "🧮filter",
+    "description": "Creates a new array with elements that satisfy the condition",
+    "syntax": "arr.filter(callback, thisArg);",
+    "returns": "A new array",
+    "accepts": "Callback function and optional thisArg"
+  },
+  {
+    "name": "🌐map",
+    "description": "Creates a new array by applying a function to each element",
+    "syntax": "arr.map(callback, thisArg);",
+    "returns": "A new array",
+    "accepts": "Callback function and optional thisArg"
+  },
+  {
+    "name": "⚗️reduce",
+    "description": "Reduces the array to a single value by applying a function",
+    "syntax": "arr.reduce(callback, initialValue);",
+    "returns": "A single value",
+    "accepts": "Callback function and optional initial value"
+  },
+  {
+    "name": "👉reduceRight",
+    "description": "Same as reduce, but processes elements from right to left",
+    "syntax": "arr.reduceRight(callback, initialValue);",
+    "returns": "A single value",
+    "accepts": "Callback function and optional initial value"
+  },
+  {
+    "name": "🧑‍🤝‍🧑forEach",
+    "description": "Executes a function once for each array element",
+    "syntax": "arr.forEach(callback, thisArg);",
+    "returns": "undefined",
+    "accepts": "Callback function and optional thisArg"
+  },
+  {
+    "name": "👨‍👩‍👧‍👦every",
+    "description": "Checks if all elements satisfy the condition",
+    "syntax": "arr.every(callback, thisArg);",
+    "returns": "true or false",
+    "accepts": "Callback function and optional thisArg"
+  },
+  {
+    "name": "👩‍👦some",
+    "description": "Checks if at least one element satisfies the condition",
+    "syntax": "arr.some(callback, thisArg);",
+    "returns": "true or false",
+    "accepts": "Callback function and optional thisArg"
+  },
+  {
+    "name": "🧺sort",
+    "description": "Sorts elements in place",
+    "syntax": "arr.sort(compareFunction);",
+    "returns": "The sorted array",
+    "accepts": "Optional compare function"
+  },
+  {
+    "name": "↩️reverse",
+    "description": "Reverses the order of elements in place",
+    "syntax": "arr.reverse();",
+    "returns": "The reversed array",
+    "accepts": "None"
+  },
+  {
+    "name": "🔤join",
+    "description": "Joins all elements of the array into a string",
+    "syntax": "arr.join(separator);",
+    "returns": "A string",
+    "accepts": "Optional separator"
+  },
+  {
+    "name": "🔡toString",
+    "description": "Converts the array to a string",
+    "syntax": "arr.toString();",
+    "returns": "A string",
+    "accepts": "None"
+  },
+  {
+    "name": "🥧fill",
+    "description": "Fills elements with a static value",
+    "syntax": "arr.fill(value, start, end);",
+    "returns": "The modified array",
+    "accepts": "Value to fill, optional start and end indices"
+  },
+  {
+    "name": "©️copyWithin",
+    "description": "Copies part of the array to another location within it",
+    "syntax": "arr.copyWithin(target, start, end);",
+    "returns": "The modified array",
+    "accepts": "Target index, start index, and optional end index"
+  },
+  {
+    "name": "🫓flat",
+    "description": "Flattens nested arrays into a single array",
+    "syntax": "arr.flat(depth);",
+    "returns": "A new array",
+    "accepts": "Optional depth (default is 1)"
+  },
+  {
+    "name": "🗺️flatMap",
+    "description": "Maps and flattens the result into a new array",
+    "syntax": "arr.flatMap(callback, thisArg);",
+    "returns": "A new array",
+    "accepts": "Callback function and optional thisArg"
+  },
+  {
+    "name": "🗝️keys",
+    "description": "Returns an iterator for array keys (indices)",
+    "syntax": "arr.keys();",
+    "returns": "An Array Iterator object",
+    "accepts": "None"
+  },
+  {
+    "name": "🪙values",
+    "description": "Returns an iterator for array values",
+    "syntax": "arr.values();",
+    "returns": "An Array Iterator object",
+    "accepts": "None"
+  },
+  {
+    "name": "📑entries",
+    "description": "Returns an iterator for key-value pairs",
+    "syntax": "arr.entries();",
+    "returns": "An Array Iterator object",
+    "accepts": "None"
+  },
+  {
+    "name": "🤔isArray",
+    "description": "Checks if the value is an array",
+    "syntax": "Array.isArray(value);",
+    "returns": "true or false",
+    "accepts": "A value to check"
+  },
+  {
+    "name": "🐣from",
+    "description": "Creates a new array from an array-like object or iterable",
+    "syntax": "Array.from(arrayLike, mapFn, thisArg);",
+    "returns": "A new array",
+    "accepts": "An array-like object, optional mapping function"
+  },
+  {
+    "name": "↘️of",
+    "description": "Creates a new array with specified elements",
+    "syntax": "Array.of(element1, ..., elementN);",
+    "returns": "A new array",
+    "accepts": "One or more elements"
+  }
+]

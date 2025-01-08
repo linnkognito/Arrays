@@ -168,6 +168,6 @@
         "clue": "If you use this method right, the line of code (array method + array name) will sort of read like real scentence."
       }
     ],
-    "solution": "function deleteUser(arr, id) {\n  // Find the index\n  const index = arr.findIndex((user) => user.id === id);\n\n  // If there's no user with that id, -1 will be returned\n  if (index === -1) {\n    console.log('There is no user with this ID.');\n    return arr; // Return the unchanged array\n  }\n\n  // If the user exists, remove them permanently\n  arr.splice(index, 1);\n\n  // Return the updated array\n  return arr;\n}\n\ndeleteUser(someDudes, '123_thatsallfolks');"
+    "solution": "Array.isArray(checkIfArray);\n// Returns true"
   }
 ]

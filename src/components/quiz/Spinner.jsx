@@ -1,10 +1,10 @@
 function Spinner() {
   return (
-    <div className='flex items-center mt-5'>
+    <div className='m-auto'>
       <img
         src='/img/spinner.png'
         alt='Loading spinner'
-        className='animate-spin rounded-full w-10 border-t-4 border-b-4 border-blue-500'
+        className='animate-spin w-10'
       />
     </div>
   );

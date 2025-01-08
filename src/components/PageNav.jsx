@@ -8,7 +8,6 @@ const navLinks = [
   { id: uuidv4(), path: '/about', title: 'About' },
   { id: uuidv4(), path: '/methods', title: 'Methods' },
   { id: uuidv4(), path: '/quiz', title: 'Quiz' },
-  { id: uuidv4(), path: '/tips', title: 'Tips & Tricks' },
 ];
 
 function PageNav() {

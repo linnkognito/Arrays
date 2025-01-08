@@ -16,6 +16,7 @@ module.exports = {
         pool: '#66d9ef',
         orange: '#ed5d40',
         'op-orange': 'rgba(237, 93, 64, 0.7)',
+        'xtra-op-orange': 'rgba(237, 93, 64, 0.5)',
         rust: '#891c29',
         steel: '#2d2d2d',
       },
