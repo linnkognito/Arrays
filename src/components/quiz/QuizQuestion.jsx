@@ -1,4 +1,5 @@
 import { useQuiz } from '../../contexts/QuizContext';
+import Code from '../Code';
 
 function QuizQuestion({ question }) {
   const { currentQuestion, index, answer, dispatch } = useQuiz();

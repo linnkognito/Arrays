@@ -7,6 +7,7 @@ import ErrorMessage from '../../pages/ErrorMessage';
 import Progress from './Progress';
 import QuizFooter from './QuizFooter';
 import QuizQuestion from './QuizQuestion';
+import FinishScreen from './FinishScreen';
 
 function QuizContainer() {
   const {
@@ -25,7 +26,7 @@ function QuizContainer() {
       fetch(ENDPOINT)
         .then((res) => res.json())
         .then((data) => dispatch({ type: 'dataReceived', payload: data }))
-        .catch((err) => console.error({ type: 'dataFailed' }));
+        .catch((err) => dispatch({ type: 'dataFailed' }));
     },
     [dispatch]
   );
@@ -37,7 +38,7 @@ function QuizContainer() {
       {status === 'ready' && <StartScreen />}
 
       {status === 'active' && (
-        <div className='flex flex-col gap-2  w-full'>
+        <div className='flex flex-col gap-2 w-full'>
           <Progress
             numQuestions={numQuestions}
             index={index}
@@ -50,6 +51,8 @@ function QuizContainer() {
           <QuizFooter />
         </div>
       )}
+
+      {status === 'finish' && <FinishScreen />}
     </div>
   );
 }

@@ -3,7 +3,7 @@ import { createContext, useContext, useReducer } from 'react';
 const QuizContext = createContext();
 
 const initialState = {
-  status: 'error',
+  status: 'loading',
   questions: [],
   index: 0,
   answer: null,
@@ -37,6 +37,21 @@ function reducer(state, action) {
 
     case 'nextQuestion':
       return { ...state, index: state.index + 1, answer: null };
+
+    case 'finish':
+      return {
+        ...state,
+        status: 'finish',
+        highscore:
+          state.points > state.highscore ? state.points : state.highscore,
+      };
+
+    case 'reset':
+      return {
+        ...state,
+        status: 'ready',
+        questions: state.questions,
+      };
 
     default:
       throw new Error('Action unknown');

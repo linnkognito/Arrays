@@ -1,7 +1,14 @@
+import { NavLink } from 'react-router-dom';
+import Button from '../components/Button';
+
 function ErrorMessage() {
   return (
-    <div className='error'>
-      <h3>😳 Oops! Something went wrong</h3>
+    <div className='m-auto'>
+      <h3 className='text-orange'>😳 Sorry! Failed to fetch quiz data</h3>
+
+      <NavLink to='/'>
+        <Button className='button w-full'>Back to home</Button>
+      </NavLink>
     </div>
   );
 }
