@@ -122,6 +122,14 @@ nav {
   border: 2px dashed #ed5d40;
   border-radius: 1em;
 }
+
+.quiz-question {
+  padding: 0 1em 1em;
+  border: 2px dashed #ed5d40;
+  /* box-shadow: 4px 4px 0 #2a555e; */
+  border-radius: 1em;
+}
+
 .clues-container {
   display: flex;
   flex-direction: column;
@@ -337,7 +345,6 @@ nav {
   flex-direction: column;
   gap: 0.5em;
   box-sizing: border-box;
-  margin-left: 1em;
   padding: 0.7em 1em;
   border-radius: 1em;
   transform: scale(1.01);

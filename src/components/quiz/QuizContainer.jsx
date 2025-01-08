@@ -37,7 +37,7 @@ function QuizContainer() {
       {status === 'ready' && <StartScreen />}
 
       {status === 'active' && (
-        <div className='flex flex-col w-full'>
+        <div className='flex flex-col gap-2  w-full'>
           <Progress
             numQuestions={numQuestions}
             index={index}
