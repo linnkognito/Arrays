@@ -1,5 +1,6 @@
 import { useQuiz } from '../../contexts/QuizContext';
 import Code from '../challenges/Code';
+import styles from './QuizQuestion.module.css';
 
 function QuizQuestion({ question }) {
   const { currentQuestion, index, answer, dispatch } = useQuiz();
@@ -8,9 +9,9 @@ function QuizQuestion({ question }) {
   function setClass(id) {
     return answer === id
       ? currentQuestion.correctAnswer === id
-        ? 'correct-answer'
-        : 'wrong-answer'
-      : 'option-disabled';
+        ? styles.correctAnswer
+        : styles.wrongAnswer
+      : styles.optionDisabled;
   }
 
   function renderFormattedQuestion(text) {
@@ -26,18 +27,18 @@ function QuizQuestion({ question }) {
   }
 
   return (
-    <div className='quiz-question bg-offwhite'>
-      <h3 className='my-2'>{`🕵️‍♀️ Question ${index + 1}`}</h3>
+    <div className={styles.quizQuestion}>
+      <h3>{`🕵️‍♀️ Question ${index + 1}`}</h3>
       <p className='px-2'>
         {renderFormattedQuestion(question?.question || '')}
       </p>
 
-      <div className={`quiz-container`}>
+      <div className={styles.quizContainer}>
         {question?.answers.map((option) => (
           <div
             key={option.id}
             className={`transition-all ${
-              !hasAnswered ? 'option' : setClass(option.id)
+              !hasAnswered ? styles.option : setClass(option.id)
             }`}
             onClick={() =>
               hasAnswered
@@ -45,10 +46,8 @@ function QuizQuestion({ question }) {
                 : dispatch({ type: 'answerGiven', payload: option.id })
             }
           >
-            <p className='option-title flex gap-2'>
-              <span className='w-fit h-fit text-offwhite bg-teal px-2 rounded-lg'>
-                {option.id}
-              </span>
+            <p className={styles.optionTitle}>
+              <span className={styles.optionIndex}>{option.id}</span>
               {option.answer}
             </p>
           </div>

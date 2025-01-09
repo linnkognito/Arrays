@@ -7,7 +7,7 @@ function ErrorMessage() {
       <h3 className='text-orange'>😳 Sorry! Failed to fetch quiz data</h3>
 
       <NavLink to='/'>
-        <Button className='button w-full'>Back to home</Button>
+        <Button className='button-full'>Back to home</Button>
       </NavLink>
     </div>
   );
