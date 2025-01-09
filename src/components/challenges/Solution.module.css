@@ -1,7 +1,15 @@
 .solution {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
   margin: 2em 0 1em;
-  padding: 0 1em 0.7em;
+  padding: 1em;
   background-color: rgba(104, 208, 189, 0.5);
   border: 2px solid #ed5d40;
   border-radius: 1em;
+}
+
+.solution h3 {
+  margin: 0;
+  font-size: 1.3rem;
 }

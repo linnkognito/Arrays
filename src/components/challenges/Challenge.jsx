@@ -14,10 +14,6 @@ function Challenge({ index, isOpen, toggleOpen, challenge }) {
   const [showEditor, setShowEditor] = useState(false);
   const open = index === isOpen;
 
-  function handleShowEditor() {
-    setShowEditor((shown) => !shown);
-  }
-
   return (
     <div className={styles.challenge}>
       <div className={styles.challengeTop}>
@@ -35,7 +31,10 @@ function Challenge({ index, isOpen, toggleOpen, challenge }) {
 
           <Code>{`${challenge.data}`}</Code>
 
-          <Button className={'button-small'} onClick={handleShowEditor}>
+          <Button
+            className={'button-small'}
+            onClick={() => setShowEditor((shown) => !shown)}
+          >
             Code editor
           </Button>
           {showEditor && <CodeEditor />}

@@ -1,8 +1,16 @@
 .clues {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
   margin: 2em 0 1em;
-  padding: 0 1em 1em;
+  padding: 1em;
   border: 2px dashed #ed5d40;
   border-radius: 1em;
+}
+
+.clues h3 {
+  margin: 0;
+  font-size: 1.3rem;
 }
 
 .cluesContainer {
