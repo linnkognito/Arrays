@@ -1,6 +1,8 @@
+import styles from './Progress.module.css';
+
 function Progress({ index, numQuestions, answer, points }) {
   return (
-    <div className='flex justify-center items-center gap-4 mx-10'>
+    <div className={styles.progress}>
       {/* Progress bar */}
       <progress
         max={numQuestions}
@@ -14,7 +16,7 @@ function Progress({ index, numQuestions, answer, points }) {
       ></progress>
 
       {/* Points counter */}
-      <p className='flex gap-1 min-w-fit text-lg '>
+      <p className={styles.points}>
         <span className='font-bold'>{`${points}/10`}</span>
         points
       </p>

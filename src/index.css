@@ -55,12 +55,6 @@ nav {
   padding: 0.7em 1em;
 }
 
-.border {
-  width: fit-content;
-  border: 2px solid #ed5d40;
-  border-radius: 1em;
-}
-
 .about {
   display: flex;
   flex-direction: column;

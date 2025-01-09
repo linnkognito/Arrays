@@ -8,6 +8,7 @@ import Progress from './Progress';
 import QuizFooter from './QuizFooter';
 import QuizQuestion from './QuizQuestion';
 import FinishScreen from './FinishScreen';
+import styles from './QuizContainer.module.css';
 
 function QuizContainer() {
   const {
@@ -19,6 +20,7 @@ function QuizContainer() {
     points,
     dispatch,
   } = useQuiz();
+
   const ENDPOINT = 'http://localhost:8000/questions';
 
   useEffect(
@@ -32,13 +34,13 @@ function QuizContainer() {
   );
 
   return (
-    <div className='min-w-[70%] max-w-[70%] flex items-center p-6 bg-offwhite border rounded'>
+    <div className={styles.quizContainer}>
       {status === 'loading' && <Spinner />}
       {status === 'error' && <ErrorMessage />}
       {status === 'ready' && <StartScreen />}
 
       {status === 'active' && (
-        <div className='flex flex-col gap-2 w-full'>
+        <div className={styles.quizContent}>
           <Progress
             numQuestions={numQuestions}
             index={index}

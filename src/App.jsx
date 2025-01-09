@@ -29,7 +29,7 @@ export default function App() {
             path='quiz'
             element={
               <QuizProvider>
-                <QuizPage />{' '}
+                <QuizPage />
               </QuizProvider>
             }
           />

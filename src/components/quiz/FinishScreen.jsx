@@ -1,18 +1,18 @@
 import { useQuiz } from '../../contexts/QuizContext';
 import Button from '../common/Button';
+import styles from './FinishScreen.module.css';
 
 function FinishScreen() {
-  const { points, highscore, numQuestions, dispatch } = useQuiz();
+  const { points, numQuestions, newHighscore, dispatch } = useQuiz();
+
   return (
-    <div className='w-fit m-auto flex flex-col items-center gap-0'>
-      <h3 className='m-0'>
-        {points > highscore ? '🥳New highscore!' : '🚩Completed!'}
-      </h3>
+    <div className={styles.finishScreen}>
+      <h3>{newHighscore ? '🥳New highscore!' : '🚩Completed!'}</h3>
 
       <p>{`Your scored ${points} out of a total of ${numQuestions} points.`}</p>
 
       <Button
-        className='w-full button'
+        className='button-full'
         onClick={() => dispatch({ type: 'reset', payload: points })}
       >
         Play again!

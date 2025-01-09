@@ -1,0 +1,17 @@
+.quizContainer {
+  display: flex;
+  align-items: center;
+  min-width: 70%;
+  max-width: 70%;
+  padding: 1.5em;
+  background-color: #ffffe4;
+  border: 2px solid #ed5d40;
+  border-radius: 1em;
+}
+
+.quizContent {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+  width: 100%;
+}

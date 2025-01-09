@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import { NavLink, useLocation } from 'react-router-dom';
 import Button from './Button';
+import { useQuiz } from '../../contexts/QuizContext';
 
 const navLinks = [
   { id: 1, path: '/', title: 'Home' },
@@ -10,7 +11,26 @@ const navLinks = [
 ];
 
 function PageNav() {
+  const quizContext = useQuiz();
+  const dispatch = quizContext?.dispatch;
+  const status = quizContext?.status;
   const location = useLocation();
+
+  function handleQuizLink(path) {
+    if (
+      location.pathname === '/quiz' &&
+      path === '/quiz' &&
+      status !== 'ready'
+    ) {
+      const confirmReset = window.confirm(
+        'Are you sure you want to reset the quiz? Your current progress will be lost.'
+      );
+
+      if (!confirmReset) return;
+
+      dispatch({ type: 'reset' });
+    }
+  }
 
   // Set page title
   useEffect(() => {
@@ -31,7 +51,11 @@ function PageNav() {
 
       <nav>
         {navLinks.map((link) => (
-          <NavLink key={link.id} to={link.path}>
+          <NavLink
+            key={link.id}
+            to={link.path}
+            onClick={() => handleQuizLink(link.path)}
+          >
             <Button className='button-nav'>{link.title}</Button>
           </NavLink>
         ))}

@@ -56,7 +56,6 @@ function reducer(state, action) {
         index: 0,
         answer: null,
         points: 0,
-        newHighscore: false,
       };
 
     default:
@@ -65,10 +64,10 @@ function reducer(state, action) {
 }
 
 function QuizProvider({ children }) {
-  const [{ status, questions, index, answer, points }, dispatch] = useReducer(
-    reducer,
-    initialState
-  );
+  const [
+    { status, questions, index, answer, points, highscore, newHighscore },
+    dispatch,
+  ] = useReducer(reducer, initialState);
 
   const numQuestions = questions.length;
   const currentQuestion = questions.at(index);
@@ -84,6 +83,8 @@ function QuizProvider({ children }) {
         index,
         answer,
         points,
+        highscore,
+        newHighscore,
         dispatch,
       }}
     >
@@ -94,8 +95,6 @@ function QuizProvider({ children }) {
 
 function useQuiz() {
   const context = useContext(QuizContext);
-  if (context === undefined)
-    throw new Error('The Quiz Context was used outside of the QuizProvider');
 
   return context;
 }

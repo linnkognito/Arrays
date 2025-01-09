@@ -1,4 +1,5 @@
-.button {
+.button,
+.button-full {
   min-width: 5em;
   padding: 0.4em 0.5em;
   font-size: 1rem;
@@ -14,6 +15,10 @@
     margin-right: 0.1em;
     box-shadow: 3px 4px 0 #891c29;
   }
+}
+
+.button-full {
+  width: 100%;
 }
 
 .button-small {
