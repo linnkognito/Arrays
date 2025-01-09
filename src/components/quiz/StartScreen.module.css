@@ -1,0 +1,29 @@
+.startScreen {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  padding: 0;
+  background-color: rgba(104, 208, 189, 0.3);
+  border: 2px solid #68d0bd;
+  border-radius: 1em;
+}
+
+.startScreen h3 {
+  padding: 1em;
+}
+
+.startContent {
+  display: flex;
+  flex-direction: column;
+  margin: 1.5em;
+  margin-left: 0;
+  padding: 1em;
+  gap: 1em;
+  background-color: #ffffe4;
+  border-radius: 1em;
+}
+
+.startContent p {
+  margin: 0;
+  font-size: 1.1rem;
+}
