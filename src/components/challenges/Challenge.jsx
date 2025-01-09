@@ -10,9 +10,9 @@ import Button from '../common/Button';
 
 import styles from './Challenge.module.css';
 
-function Challenge({ num, isOpen, onClick, challenge }) {
+function Challenge({ index, isOpen, toggleOpen, challenge }) {
   const [showEditor, setShowEditor] = useState(false);
-  const open = num === isOpen;
+  const open = index === isOpen;
 
   function handleShowEditor() {
     setShowEditor((shown) => !shown);
@@ -22,20 +22,26 @@ function Challenge({ num, isOpen, onClick, challenge }) {
     <div className={styles.challenge}>
       <div className={styles.challengeTop}>
         <h2>{`${challenge.emoji} ${challenge.title}`}</h2>
-        <Button onClick={() => onClick(num)}>{open ? 'Close' : 'View'}</Button>
+        <Button onClick={() => toggleOpen(index)}>
+          {open ? 'Close' : 'View'}
+        </Button>
       </div>
 
       {open && (
         <>
           {parseText(challenge.description)}
+
           {challenge.noteCard && <NoteCard challenge={challenge} />}
+
           <Code>{`${challenge.data}`}</Code>
+
           <Button className={'button-small'} onClick={handleShowEditor}>
             Code editor
           </Button>
-
           {showEditor && <CodeEditor />}
+
           <Clues clues={challenge.clues} emoji={challenge.clueEmoji} />
+
           <Solution>{challenge.solution}</Solution>
         </>
       )}

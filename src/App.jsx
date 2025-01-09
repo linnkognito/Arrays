@@ -12,6 +12,7 @@ import MethodList from './pages/MethodList';
 import QuizPage from './pages/QuizPage';
 import PageNotFound from './pages/PageNotFound';
 import { QuizProvider } from './contexts/QuizContext';
+import Main from './components/Main';
 
 export default function App() {
   useEffect(() => {
@@ -19,10 +20,10 @@ export default function App() {
   }, []);
 
   return (
-    <div className='app'>
+    <Main>
       <BrowserRouter>
         <Routes>
-          <Route index element={<PageNotFound />} />
+          <Route index element={<Homepage />} />
           <Route path='about' element={<AboutPage />} />
           <Route path='methods' element={<MethodList />} />
           <Route
@@ -36,6 +37,6 @@ export default function App() {
           <Route path='*' element={<PageNotFound />} />
         </Routes>
       </BrowserRouter>
-    </div>
+    </Main>
   );
 }

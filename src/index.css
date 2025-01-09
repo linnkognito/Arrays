@@ -3,10 +3,17 @@
 @tailwind utilities;
 
 /* Reusable */
-@layer utilities {
-  .top {
-    @apply flex items-center justify-between;
-  }
+.top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 body {
@@ -14,11 +21,14 @@ body {
   color: rgb(35, 21, 5);
   background-color: #44838f;
 }
-.app {
+
+nav {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  gap: 1.5em;
   align-items: center;
+  justify-content: center;
+  margin-bottom: 2em;
+  padding: 0.7em 1em;
 }
 
 p,
@@ -31,6 +41,7 @@ button {
   letter-spacing: 0.02em;
   line-height: 1.5em;
 }
+
 h1 {
   margin-bottom: 0.1em;
   text-align: center;
@@ -40,59 +51,15 @@ h1 {
   color: #ed5d40;
   text-shadow: 3px 3px 0 #891c29;
 }
+
 h3 {
   font-size: 1.5rem;
   font-weight: 800;
   letter-spacing: 0.1em;
   color: #2a555e;
 }
-nav {
-  display: flex;
-  gap: 1.5em;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 2em;
-  padding: 0.7em 1em;
-}
 
 ::selection {
   color: #ffffe4;
   background-color: rgba(237, 93, 64, 0.7);
-}
-
-/* P r o g r e s s  B a r */
-progress {
-  width: 100%;
-  height: 1rem;
-  margin: auto;
-  appearance: none;
-  background-color: rgba(104, 208, 189, 0.5);
-  border: 2px solid #44838f;
-  border-radius: 1em;
-}
-
-/* Chrome, Safari, Edge */
-progress::-webkit-progress-bar {
-  background-color: rgba(104, 208, 189, 0.5);
-  border-radius: 1em;
-}
-
-progress::-webkit-progress-value {
-  background-color: #44838f;
-  border-radius: 1em;
-  transition: width 0.3s ease;
-}
-
-/* Firefox */
-progress::-moz-progress-bar {
-  background-color: #44838f;
-  border-radius: 1em;
-  transition: width 0.3s ease;
-}
-
-/* Internet Explorer */
-progress::-ms-fill {
-  background-color: #44838f;
-  border-radius: 1em;
-  transition: width 0.3s ease;
 }
