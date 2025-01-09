@@ -1,0 +1,48 @@
+.methodCard {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+  width: 110%;
+  padding: 0.7em 1em;
+  background-color: #ffffe4;
+  border: 3px solid #2a555e;
+  border-radius: 1em;
+  box-shadow: 4px 4px 0 #2a555e;
+}
+
+.methodCard h3 {
+  margin: 0;
+  font-family: 'Fira Code', monospace;
+  font-weight: 1000;
+  font-size: 1.35rem;
+  letter-spacing: 0.1em;
+  color: #ed5d40;
+}
+
+.acceptsReturnsWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7em;
+  padding: 1em;
+  background-color: rgba(104, 208, 189, 0.3);
+  border-radius: 1em;
+}
+
+.methodSubTitle {
+  font-weight: 800;
+  color: #ed5d40;
+}
+
+.methodCard p {
+  margin: 0;
+  padding: 0;
+}
+
+.methodAccepts,
+.methodReturns {
+  max-width: 100%;
+  padding: 0.7em 1em;
+  background-color: #ffffe4;
+  border: 3px solid #2a555e;
+  border-radius: 1em;
+}

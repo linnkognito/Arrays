@@ -95,119 +95,12 @@ nav {
   line-height: 1.5em;
 }
 
-/* C o d e  e x a m p l e s */
-
-.solution-top {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.solution {
-  margin: 2em 0 1em;
-  padding: 0 1em 0.7em;
-  background-color: rgba(104, 208, 189, 0.5);
-  border: 2px solid #ed5d40;
-  border-radius: 1em;
-}
-
-/* B u t t o n s */
-
-/* .button-small {
-  min-width: 5em;
-  margin-left: 0.5em;
-  font-size: 0.7rem;
-  color: #ffffe4;
-  background-color: #ed5d40;
-  border: 2px solid #891c29;
-  border-radius: 1em;
-  box-shadow: 2px 2px 0 #891c29;
-  cursor: pointer;
-  transition: all 0.2s ease-in;
-
-  &:hover {
-    margin-left: 0.3em;
-    box-shadow: 2px 3px 0 #891c29;
-  }
-} */
-.button-nav {
-  min-width: 5em;
-  font-size: 1rem;
-  font-weight: 800;
-  padding: 0.2em 0.8em;
-  letter-spacing: 0.2em;
-  color: #2a555e;
-  background-color: #ffffe4;
-  border: 2px solid #66d9ef;
-  border-radius: 1em;
-  box-shadow: 2px 2px 0 #66d9ef;
-  cursor: pointer;
-  transition: all 0.2s ease-in;
-
-  &:hover {
-    margin-right: 0.2em;
-    box-shadow: 3px 4px 0 #66d9ef;
-  }
-}
-
 ::selection {
   color: #ffffe4;
   background-color: rgba(237, 93, 64, 0.7);
 }
 
 /* M e t h o d  t a b l e */
-.methods {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 50%;
-  background-color: rgba(104, 208, 189, 0.7);
-  border: 2px solid #2a555e;
-  border-radius: 0.8em;
-}
-.methods h2 {
-  justify-self: center;
-  margin: 0.3em 0;
-  font-size: 2.2rem;
-  font-weight: 1000;
-  letter-spacing: 0.05em;
-  color: #ffffe4;
-  text-shadow: -1px 1px 0 #2a555e;
-}
-
-.method {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  margin-bottom: 1.5em;
-  padding: 1em 1.5em;
-  letter-spacing: 0.02em;
-  line-height: 1.5em;
-  background-color: #ffffe4;
-  border: 2px solid #2a555e;
-  border-radius: 1em;
-  box-shadow: 4px 4px 0 #2a555e;
-}
-.method-name {
-  font-family: 'Fira Code', monospace;
-  font-weight: 1000;
-  font-size: 1.3rem;
-  letter-spacing: 0.1em;
-  color: #ed5d40;
-}
-.method-accepts,
-.method-returns {
-  background-color: rgba(104, 208, 189, 0.3);
-  border-color: #44838f;
-
-  &:hover {
-    transform: none;
-  }
-}
-.method-title {
-  font-weight: 800;
-  color: #ed5d40;
-}
 
 /* Q u i z */
 .correct-answer,
