@@ -1,7 +1,6 @@
 import { useEffect } from 'react';
 import { NavLink, useLocation } from 'react-router-dom';
 import Button from './Button';
-import styles from './PageNav.module.css';
 
 const navLinks = [
   { id: 1, path: '/', title: 'Home' },
@@ -33,7 +32,7 @@ function PageNav() {
       <nav>
         {navLinks.map((link) => (
           <NavLink key={link.id} to={link.path}>
-            <Button className={styles.buttonNav}>{link.title}</Button>
+            <Button className='button-nav'>{link.title}</Button>
           </NavLink>
         ))}
       </nav>

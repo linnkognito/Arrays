@@ -1,0 +1,15 @@
+.noteCard {
+  padding: 0.5em 1em;
+  margin-bottom: 1.5em;
+  border: 2px solid #ed5d40;
+  border-radius: 1em;
+}
+
+.noteCard p {
+  display: inline;
+}
+
+.noteCardLabel {
+  color: #ed5d40;
+  font-weight: 800;
+}

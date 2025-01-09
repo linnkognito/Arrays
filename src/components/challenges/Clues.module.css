@@ -1,0 +1,44 @@
+.clues {
+  margin: 2em 0 1em;
+  padding: 0 1em 1em;
+  border: 2px dashed #ed5d40;
+  border-radius: 1em;
+}
+
+.cluesContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7em;
+  margin-top: 0.4em;
+  padding: 1em;
+  background-color: rgba(104, 208, 189, 0.3);
+  border-radius: 1em;
+}
+
+.clue {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+  box-sizing: border-box;
+  padding: 0.7em 1em;
+  border-radius: 1em;
+  background-color: #ffffe4;
+  border: 2px solid #ed5d40;
+  transition: transform 0.1s ease-in;
+
+  &:hover {
+    transform: scale(1.01);
+  }
+}
+
+.clueTitle {
+  font-size: 1.1rem;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.clue p {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}

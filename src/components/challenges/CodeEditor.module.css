@@ -1,0 +1,37 @@
+.editor {
+  position: relative;
+  width: 80%;
+  height: 400px;
+  margin: 1em 0;
+  padding: 1em;
+  font-family: 'Fira Code', monospace;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: transparent;
+  background-color: #2d2d2d;
+  border-radius: 1em;
+  overflow: auto;
+}
+
+/* S c r o l l b a r */
+.editor::-webkit-scrollbar {
+  width: 1rem;
+  height: 1rem;
+  padding-right: 1em;
+}
+.editor::-webkit-scrollbar-thumb {
+  background: #66d9ef;
+  border-radius: 1em;
+  border: 2px solid #2b2b2b;
+}
+.editor::-webkit-scrollbar-track {
+  background: #ed5d40;
+  border-radius: 1em;
+  border: 2px solid #2b2b2b;
+}
+.editor::-webkit-scrollbar-thumb:hover {
+  background: #ffffe4;
+}
+.editor::-webkit-scrollbar-thumb:active {
+  background: #66d9ef;
+}

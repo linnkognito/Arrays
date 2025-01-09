@@ -2,15 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
-/* @layer base {
-   h1 {
-    @apply 
-  } 
-} */
-
+/* Reusable */
 @layer utilities {
-  .transition-all-button {
-    @apply transition-all duration-200 ease-in;
+  .top {
+    @apply flex items-center justify-between;
   }
 }
 
@@ -50,7 +45,6 @@ h3 {
   font-weight: 800;
   letter-spacing: 0.1em;
   color: #2a555e;
-  /* text-shadow: 1px 1px 0 #66d9ef; */
 }
 nav {
   display: flex;
@@ -102,72 +96,11 @@ nav {
 }
 
 /* C o d e  e x a m p l e s */
-.line-numbers {
-  width: 80%;
-  border-radius: 1em;
-}
 
-.challenge-top,
-.clues-top,
 .solution-top {
   display: flex;
   align-items: center;
   justify-content: space-between;
-}
-.challenge {
-  width: 700px;
-  margin: 0 3em 2em;
-  padding: 1em 2em;
-  background: #ffffe4;
-  border: 2px solid #68d0bd;
-  border-radius: 1em;
-  box-shadow: 6px 6px 0 #68d0bd;
-}
-.challenge h2 {
-  letter-spacing: 0.2em;
-  color: #ed5d40;
-}
-
-.clues {
-  margin: 2em 0 1em;
-  padding: 0 1em 1em;
-  border: 2px dashed #ed5d40;
-  border-radius: 1em;
-}
-
-.clues-container {
-  display: flex;
-  flex-direction: column;
-  gap: 0.7em;
-  margin-top: 0.4em;
-  padding: 1em;
-  background-color: rgba(104, 208, 189, 0.3);
-  border-radius: 1em;
-}
-.clue p {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-.clue-title {
-  font-size: 1.1rem;
-  font-weight: 800;
-  cursor: pointer;
-}
-.clue {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5em;
-  box-sizing: border-box;
-  padding: 0.7em 1em;
-  border-radius: 1em;
-  background-color: #ffffe4;
-  border: 2px solid #ed5d40;
-  transition: transform 0.1s ease-in;
-
-  &:hover {
-    transform: scale(1.01);
-  }
 }
 
 .solution {
@@ -178,23 +111,9 @@ nav {
   border-radius: 1em;
 }
 
-.note-card p {
-  display: inline;
-}
-.note-card-label {
-  color: #ed5d40;
-  font-weight: 800;
-}
-.note-card {
-  padding: 0.5em 1em;
-  margin-bottom: 1.5em;
-  border: 2px solid #ed5d40;
-  border-radius: 1em;
-}
-
 /* B u t t o n s */
 
-.button-small {
+/* .button-small {
   min-width: 5em;
   margin-left: 0.5em;
   font-size: 0.7rem;
@@ -208,9 +127,9 @@ nav {
 
   &:hover {
     margin-left: 0.3em;
-    box-shadow: -2px 3px 0 #891c29;
+    box-shadow: 2px 3px 0 #891c29;
   }
-}
+} */
 .button-nav {
   min-width: 5em;
   font-size: 1rem;
@@ -234,41 +153,6 @@ nav {
 ::selection {
   color: #ffffe4;
   background-color: rgba(237, 93, 64, 0.7);
-}
-
-/* C o d e  e d i t o r */
-.editor::-webkit-scrollbar {
-  width: 12px;
-  height: 12px;
-}
-.editor::-webkit-scrollbar-thumb {
-  background: #66d9ef;
-  border-radius: 10px;
-  border: 2px solid #2b2b2b;
-}
-.editor::-webkit-scrollbar-track {
-  background: #ed5d40;
-  border-radius: 10px;
-}
-.editor::-webkit-scrollbar-thumb:hover {
-  background: #ffffe4;
-}
-.editor::-webkit-scrollbar-thumb:active {
-  background: #66d9ef;
-}
-
-.editor {
-  position: relative;
-  min-height: 400px;
-  margin: 1em 0;
-  padding: 1em;
-  font-family: 'Fira Code', monospace;
-  font-size: 1rem;
-  line-height: 1.5;
-  color: transparent;
-  background-color: #2d2d2d;
-  border-radius: 1em;
-  overflow: auto;
 }
 
 /* M e t h o d  t a b l e */

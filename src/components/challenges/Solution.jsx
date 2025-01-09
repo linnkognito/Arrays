@@ -1,16 +1,16 @@
 import { useState } from 'react';
-
 import Code from './Code';
 import ComponentHeader from '../common/ComponentHeader';
+import styles from './Solution.module.css';
 
 function Solution({ children }) {
   const [isOpen, setIsOpen] = useState(false);
   const handleToggleSolution = () => setIsOpen((open) => !open);
 
   return (
-    <div className='solution'>
+    <div className={styles.solution}>
       <ComponentHeader
-        className='solution-top'
+        className='top'
         title='👩‍💻 Show solution'
         onToggle={handleToggleSolution}
         isShown={isOpen}

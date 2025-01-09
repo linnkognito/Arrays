@@ -7,12 +7,14 @@
   border-radius: 1em;
   box-shadow: 6px 6px 0 #68d0bd;
 }
-.challenge h2 {
-  letter-spacing: 0.2em;
-  color: #ed5d40;
-}
+
 .challengeTop {
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+.challenge h2 {
+  letter-spacing: 0.2em;
+  color: #ed5d40;
 }
