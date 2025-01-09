@@ -1,0 +1,18 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  min-width: 400px;
+  padding: 1.5em 2em;
+  background-color: #ffffe4;
+  border: 2px solid #ed5d40;
+  border-radius: 1em;
+  box-shadow: 6px 6px 0 #ed5d40;
+}
+
+.wrapper h2 {
+  font-size: 1.5rem;
+  color: #ed5d40;
+}

@@ -1,6 +1,6 @@
 module.exports = {
   corePlugins: {
-    preflight: false, // Disables Tailwind's reset styles
+    preflight: false, // Disables reset styles
     outline: false,
   },
   content: ['./src/**/*.{js,jsx,ts,tsx,html,css}', './public/index.html'],

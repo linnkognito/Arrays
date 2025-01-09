@@ -7,7 +7,7 @@ import 'prismjs/components/prism-javascript';
 
 import './index.css';
 import Homepage from './pages/Homepage';
-import About from './pages/About';
+import AboutPage from './pages/AboutPage';
 import MethodList from './pages/MethodList';
 import QuizPage from './pages/QuizPage';
 import PageNotFound from './pages/PageNotFound';
@@ -22,8 +22,8 @@ export default function App() {
     <div className='app'>
       <BrowserRouter>
         <Routes>
-          <Route index element={<Homepage />} />
-          <Route path='about' element={<About />} />
+          <Route index element={<PageNotFound />} />
+          <Route path='about' element={<AboutPage />} />
           <Route path='methods' element={<MethodList />} />
           <Route
             path='quiz'

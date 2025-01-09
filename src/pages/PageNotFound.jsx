@@ -1,10 +1,11 @@
 import PageNav from '../components/common/PageNav';
+import PageError from '../components/common/PageError';
 
 function PageNotFound() {
   return (
     <>
       <PageNav />
-      <h1>Page not found</h1>
+      <PageError />
     </>
   );
 }
