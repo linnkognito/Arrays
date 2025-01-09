@@ -20,7 +20,6 @@ module.exports = {
         rust: '#891c29',
         steel: '#2d2d2d',
       },
-
       borderRadius: {
         DEFAULT: '1em',
       },

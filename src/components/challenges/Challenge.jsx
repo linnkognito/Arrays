@@ -31,13 +31,15 @@ function Challenge({ index, isOpen, toggleOpen, challenge }) {
 
           <Code>{`${challenge.data}`}</Code>
 
-          <Button
-            className={'button-small'}
-            onClick={() => setShowEditor((shown) => !shown)}
-          >
-            Code editor
-          </Button>
-          {showEditor && <CodeEditor />}
+          <div className={styles.editorContainer}>
+            <Button
+              className={'button-small'}
+              onClick={() => setShowEditor((shown) => !shown)}
+            >
+              {!showEditor ? 'Open code editor' : 'Hide editor'}
+            </Button>
+            {showEditor && <CodeEditor />}
+          </div>
 
           <Clues clues={challenge.clues} emoji={challenge.clueEmoji} />
 

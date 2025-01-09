@@ -11,14 +11,12 @@ export default function CodeEditor() {
   });
 
   return (
-    <>
-      <CodeMirror
-        className={styles.editor}
-        value='// Start hacking'
-        width='550px'
-        theme={xcodeDark}
-        extensions={[javascript({ jsx: true }), customTheme]}
-      />
-    </>
+    <CodeMirror
+      className={styles.editor}
+      value='// Start hacking'
+      width='100%'
+      theme={xcodeDark}
+      extensions={[javascript({ jsx: true }), customTheme]}
+    />
   );
 }

@@ -30,7 +30,7 @@
     "emoji": "🧝🏿‍♂️",
     "title": "They're fancy like that",
     "description": "From the below list of users, return an array with only the premium account holders.\n Then, print the total amount of premium users with <Code>console.log</Code>.",
-    "data": "const users = [\n  { userName: 'SamwiseGamgee4ever', premium: false },\n  { userName: 'Gollum', premium: true },\n  { userName: 'L3g0lasBl0nde', premium: true },\n  { userName: 'Hobbits_have_more_fun', premium: false },\n  { userName: 'Dragonturd', premium: true }\n];",
+    "data": "const users = [\n  { userName: 'SamwiseGamgee4ever', premium: false },\n  { userName: 'Gollum', premium: true },\n  { userName: 'L3g0lasBl0nde', premium: true },\n  { userName: 'Hobbits_have_more_fun', premium: false },\n  { userName: 'DragonsAreReal', premium: true }\n];",
 
     "clueEmoji": "🔎",
     "clues": [

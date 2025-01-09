@@ -2,6 +2,8 @@ import { useState } from 'react';
 import data from '../../dev-data/challenges';
 import Challenge from './Challenge';
 
+import styles from './ChallengeList.module.css';
+
 function ChallengeList() {
   const [isOpen, setIsOpen] = useState(null);
 
@@ -9,7 +11,7 @@ function ChallengeList() {
     isOpen === index ? setIsOpen(null) : setIsOpen(index);
 
   return (
-    <div className='flex flex-col'>
+    <div className={styles.challengesWrapper}>
       {data.map((challenge, i) => (
         <Challenge
           index={i}

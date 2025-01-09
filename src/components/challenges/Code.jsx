@@ -18,7 +18,7 @@ export default function Code({
 
   return (
     <div>
-      <pre className='w-4/5 rounded'>
+      <pre className='w-full rounded'>
         <code className={`language-${language}`}>{children}</code>
       </pre>
     </div>
