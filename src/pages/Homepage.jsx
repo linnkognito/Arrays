@@ -1,5 +1,5 @@
-import PageNav from '../components/PageNav';
-import ChallengeList from '../components/ChallengeList';
+import PageNav from '../components/common/PageNav';
+import ChallengeList from '../components/challenges/ChallengeList';
 
 function Homepage() {
   return (

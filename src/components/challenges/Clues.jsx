@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { v4 as uuidv4 } from 'uuid';
-import { parseCodeTags } from '../utils/helpers';
-import ComponentHeader from './ComponentHeader';
+import { parseCodeTags } from '../../utils/helpers';
+import ComponentHeader from '../common/ComponentHeader';
 
 function Clues({ clues, emoji }) {
   const [showClues, setShowClues] = useState(false);

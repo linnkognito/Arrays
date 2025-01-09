@@ -1,4 +1,4 @@
-import Code from '../components/Code';
+import Code from '../components/challenges/Code';
 
 export function parseCodeTags(text) {
   const codeRegex = /<Code>(.*?)<\/Code>/g;

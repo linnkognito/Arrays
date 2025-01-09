@@ -1,5 +1,5 @@
 import { useQuiz } from '../../contexts/QuizContext';
-import Button from '../Button';
+import Button from '../common/Button';
 
 function QuizFooter() {
   const { dispatch, answer, index, numQuestions } = useQuiz();

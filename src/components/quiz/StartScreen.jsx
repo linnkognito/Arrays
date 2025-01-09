@@ -1,5 +1,5 @@
 import { useQuiz } from '../../contexts/QuizContext';
-import Button from '../Button';
+import Button from '../common/Button';
 
 function StartScreen() {
   const { dispatch, numQuestions, SECONDS_PER_QUESTION: seconds } = useQuiz();

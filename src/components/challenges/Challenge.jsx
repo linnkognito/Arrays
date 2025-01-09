@@ -1,12 +1,14 @@
 import { useState } from 'react';
-import { parseText } from '../utils/helpers';
+import { parseText } from '../../utils/helpers';
 
 import Code from './Code';
 import CodeEditor from './CodeEditor';
 import NoteCard from './NoteCard';
 import Clues from './Clues';
 import Solution from './Solution';
-import Button from './Button';
+import Button from '../common/Button';
+
+import styles from './Challenge.module.css';
 
 function Challenge({ num, isOpen, onClick, challenge }) {
   const [showEditor, setShowEditor] = useState(false);
@@ -17,8 +19,8 @@ function Challenge({ num, isOpen, onClick, challenge }) {
   }
 
   return (
-    <div className='challenge'>
-      <div className='challenge-top'>
+    <div className={styles.challenge}>
+      <div className={styles.challengeTop}>
         <h2>{`${challenge.emoji} ${challenge.title}`}</h2>
         <Button onClick={() => onClick(num)}>{open ? 'Close' : 'View'}</Button>
       </div>

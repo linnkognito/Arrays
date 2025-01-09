@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 
-import data from '../dev-data/challenges';
+import data from '../../dev-data/challenges';
 import Challenge from './Challenge';
 
 function ChallengeList() {

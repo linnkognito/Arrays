@@ -1,5 +1,5 @@
 import { useQuiz } from '../../contexts/QuizContext';
-import Code from '../Code';
+import Code from '../challenges/Code';
 
 function QuizQuestion({ question }) {
   const { currentQuestion, index, answer, dispatch } = useQuiz();
@@ -14,14 +14,13 @@ function QuizQuestion({ question }) {
   }
 
   function renderFormattedQuestion(text) {
-    // Regex to match text inside backticks
     const parts = text.split(/(`[^`]+`)/g);
+
     return parts.map((part, index) => {
       if (part.startsWith('`') && part.endsWith('`')) {
-        // If it's a code snippet, wrap it in the <Code> component
         return <Code key={index}>{part.slice(1, -1)}</Code>;
       }
-      // Otherwise, return the plain text
+
       return part;
     });
   }
@@ -29,7 +28,6 @@ function QuizQuestion({ question }) {
   return (
     <div className='quiz-question bg-offwhite'>
       <h3 className='my-2'>{`🕵️‍♀️ Question ${index + 1}`}</h3>
-      {/* <p className='px-2'>{question?.question}</p> */}
       <p className='px-2'>
         {renderFormattedQuestion(question?.question || '')}
       </p>

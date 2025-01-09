@@ -3,7 +3,7 @@ import { useQuiz } from '../../contexts/QuizContext';
 
 import StartScreen from './StartScreen';
 import Spinner from './Spinner';
-import ErrorMessage from '../../pages/ErrorMessage';
+import ErrorMessage from './ErrorMessage';
 import Progress from './Progress';
 import QuizFooter from './QuizFooter';
 import QuizQuestion from './QuizQuestion';

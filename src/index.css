@@ -2,6 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
+/* @layer base {
+   h1 {
+    @apply 
+  } 
+} */
+
+@layer utilities {
+  .transition-all-button {
+    @apply transition-all duration-200 ease-in;
+  }
+}
+
 body {
   font-family: 'Quicksand', sans-serif;
   color: rgb(35, 21, 5);
@@ -181,23 +193,7 @@ nav {
 }
 
 /* B u t t o n s */
-.button {
-  min-width: 5em;
-  padding: 0.4em 0.5em;
-  font-size: 1rem;
-  color: #ffffe4;
-  background-color: #ed5d40;
-  border: 2px solid #891c29;
-  border-radius: 1em;
-  box-shadow: 2px 2px 0 #891c29;
-  cursor: pointer;
-  transition: all 0.2s ease-in;
 
-  &:hover {
-    margin-right: 0.1em;
-    box-shadow: 3px 4px 0 #891c29;
-  }
-}
 .button-small {
   min-width: 5em;
   margin-left: 0.5em;

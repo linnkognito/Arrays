@@ -1,4 +1,4 @@
-import Code from './Code';
+import Code from '../challenges/Code';
 
 function Method({ method, description, syntax, returns, accepts }) {
   return (

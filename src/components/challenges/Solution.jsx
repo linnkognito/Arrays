@@ -1,7 +1,7 @@
 import { useState } from 'react';
 
 import Code from './Code';
-import ComponentHeader from './ComponentHeader';
+import ComponentHeader from '../common/ComponentHeader';
 
 function Solution({ children }) {
   const [isOpen, setIsOpen] = useState(false);

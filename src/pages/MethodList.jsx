@@ -1,5 +1,5 @@
-import MethodCheatSheet from '../components/MethodCheatSheet';
-import PageNav from '../components/PageNav';
+import MethodCheatSheet from '../components/methods/MethodCheatSheet';
+import PageNav from '../components/common/PageNav';
 import methodList from '../dev-data/methodList.json';
 
 function MethodList() {

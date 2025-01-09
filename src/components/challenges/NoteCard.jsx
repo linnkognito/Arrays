@@ -1,4 +1,4 @@
-import { parseText } from '../utils/helpers';
+import { parseText } from '../../utils/helpers';
 
 function NoteCard({ challenge }) {
   return (

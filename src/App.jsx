@@ -25,7 +25,6 @@ export default function App() {
           <Route index element={<Homepage />} />
           <Route path='about' element={<About />} />
           <Route path='methods' element={<MethodList />} />
-
           <Route
             path='quiz'
             element={
@@ -34,7 +33,6 @@ export default function App() {
               </QuizProvider>
             }
           />
-
           <Route path='*' element={<PageNotFound />} />
         </Routes>
       </BrowserRouter>

@@ -9,6 +9,7 @@ const initialState = {
   answer: null,
   points: 0,
   highscore: 0,
+  newHighscore: false,
 };
 
 const SECONDS_PER_QUESTION = 30;
@@ -42,6 +43,7 @@ function reducer(state, action) {
       return {
         ...state,
         status: 'finished',
+        newHighscore: state.points > state.highscore,
         highscore:
           state.points > state.highscore ? state.points : state.highscore,
       };
@@ -54,6 +56,7 @@ function reducer(state, action) {
         index: 0,
         answer: null,
         points: 0,
+        newHighscore: false,
       };
 
     default:
