@@ -21,7 +21,7 @@ function QuizContainer() {
     dispatch,
   } = useQuiz();
 
-  const ENDPOINT = 'http://localhost:8000/questions';
+  const ENDPOINT = 'https://quiz-server-qvvp.onrender.com/questions';
 
   useEffect(
     function () {
