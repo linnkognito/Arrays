@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { NavLink, useLocation } from 'react-router-dom';
+import { NavLink, useLocation, useNavigate } from 'react-router-dom';
 import Button from './Button';
 import { useQuiz } from '../../contexts/QuizContext';
 
@@ -12,6 +12,7 @@ const navLinks = [
 
 function PageNav() {
   const quizContext = useQuiz();
+  const navigate = useNavigate();
   const dispatch = quizContext?.dispatch;
   const status = quizContext?.status;
   const location = useLocation();
@@ -32,6 +33,14 @@ function PageNav() {
     }
   }
 
+  function handleHomeLink(path) {
+    if (location.pathname === '/') {
+      window.location.reload();
+    } else {
+      navigate(path);
+    }
+  }
+
   // Set page title
   useEffect(() => {
     const currentPage = navLinks.find(
@@ -46,7 +55,7 @@ function PageNav() {
   return (
     <header>
       <NavLink style={{ textDecoration: 'none' }} to='/'>
-        <h1>[ Arrays ]</h1>
+        <h1 onClick={() => handleHomeLink('/')}>[ Arrays ]</h1>
       </NavLink>
 
       <nav>
@@ -54,7 +63,11 @@ function PageNav() {
           <NavLink
             key={link.id}
             to={link.path}
-            onClick={() => handleQuizLink(link.path)}
+            onClick={() =>
+              link.path === '/'
+                ? handleHomeLink(link.path)
+                : handleQuizLink(link.path)
+            }
           >
             <Button className='button-nav'>{link.title}</Button>
           </NavLink>
