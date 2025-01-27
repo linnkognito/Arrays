@@ -1,10 +1,11 @@
 import { createContext, useContext, useReducer } from 'react';
+import quizQuestions from '../dev-data/quizQuestions.json';
 
 const QuizContext = createContext();
 
 const initialState = {
   status: 'loading',
-  questions: [],
+  questions: quizQuestions,
   index: 0,
   answer: null,
   points: 0,
@@ -15,11 +16,7 @@ const initialState = {
 function reducer(state, action) {
   switch (action.type) {
     case 'dataReceived':
-      return {
-        ...state,
-        questions: action.payload,
-        status: 'ready',
-      };
+      return { ...state, questions: action.payload, status: 'ready' };
 
     case 'dataFailed':
       return { ...state, status: 'error' };
@@ -71,8 +68,7 @@ function QuizProvider({ children }) {
     dispatch,
   ] = useReducer(reducer, initialState);
 
-  const numQuestions = questions.length;
-  const currentQuestion = questions.at(index);
+  const numQuestions = questions?.length;
 
   return (
     <QuizContext.Provider
@@ -80,7 +76,6 @@ function QuizProvider({ children }) {
         status,
         questions,
         numQuestions,
-        currentQuestion,
         index,
         answer,
         points,

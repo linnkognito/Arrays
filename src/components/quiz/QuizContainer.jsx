@@ -1,14 +1,15 @@
 import { useEffect } from 'react';
 import { useQuiz } from '../../contexts/QuizContext';
 
+import styles from './QuizContainer.module.css';
+
 import StartScreen from './StartScreen';
 import Spinner from './Spinner';
 import ErrorMessage from './ErrorMessage';
 import Progress from './Progress';
-import QuizFooter from './QuizFooter';
 import QuizQuestion from './QuizQuestion';
+import QuizFooter from './QuizFooter';
 import FinishScreen from './FinishScreen';
-import styles from './QuizContainer.module.css';
 
 function QuizContainer() {
   const {
@@ -21,17 +22,23 @@ function QuizContainer() {
     dispatch,
   } = useQuiz();
 
-  const ENDPOINT = 'https://quiz-server-qvvp.onrender.com/questions';
+  useEffect(() => {
+    async function fetchQuizData() {
+      try {
+        const res = await fetch('/quizQuestions.json');
 
-  useEffect(
-    function () {
-      fetch(ENDPOINT)
-        .then((res) => res.json())
-        .then((data) => dispatch({ type: 'dataReceived', payload: data }))
-        .catch((err) => dispatch({ type: 'dataFailed' }));
-    },
-    [dispatch]
-  );
+        if (!res.ok) throw new Error();
+
+        const data = await res.json();
+
+        dispatch({ type: 'dataReceived', payload: data.questions });
+      } catch (err) {
+        dispatch({ type: 'dataFailed' });
+      }
+    }
+
+    fetchQuizData();
+  }, [dispatch]);
 
   return (
     <div className={styles.quizContainer}>

@@ -3,13 +3,13 @@ import Button from '../common/Button';
 import styles from './StartScreen.module.css';
 
 function StartScreen() {
-  const { dispatch, numQuestions, SECONDS_PER_QUESTION: seconds } = useQuiz();
+  const { dispatch, numQuestions } = useQuiz();
 
   return (
     <div className={styles.startScreen}>
       <h3>Welcome to the Array Quiz!</h3>
       <div className={styles.startContent}>
-        <p>{`There's a total of ${numQuestions} questions, and you will have ${seconds} seconds to solve each one. Good luck! 🤞`}</p>
+        <p>{`You'll get a total of ${numQuestions} questions to test your array method knowledge. Good luck! 🤞`}</p>
 
         <Button onClick={() => dispatch({ type: 'start' })}>
           Let's do it!

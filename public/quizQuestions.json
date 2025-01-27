@@ -1,0 +1,120 @@
+{
+  "questions": [
+    {
+      "id": 1,
+      "question": "What method adds one or more elements to the end of an array?",
+      "answers": [
+        { "id": 1, "answer": "pop()" },
+        { "id": 2, "answer": "shift()" },
+        { "id": 3, "answer": "unshift()" },
+        { "id": 4, "answer": "push()" }
+      ],
+      "correctAnswer": 4
+    },
+    {
+      "id": 2,
+      "question": "Which method can create a new array containing a portion of an existing array?",
+      "answers": [
+        { "id": 1, "answer": "splice()" },
+        { "id": 2, "answer": "slice()" },
+        { "id": 3, "answer": "split()" },
+        { "id": 4, "answer": "append()" }
+      ],
+      "correctAnswer": 2
+    },
+    {
+      "id": 3,
+      "question": "Which method removes the first element from an array and returns it?",
+      "answers": [
+        { "id": 1, "answer": "splice()" },
+        { "id": 2, "answer": "slice()" },
+        { "id": 3, "answer": "pop()" },
+        { "id": 4, "answer": "shift()" }
+      ],
+      "correctAnswer": 4
+    },
+    {
+      "id": 4,
+      "question": "What does this method return? `Array.map()`",
+      "answers": [
+        { "id": 1, "answer": "The original array without modification" },
+        {
+          "id": 2,
+          "answer": "A new array with each element transformed by a callback function"
+        },
+        {
+          "id": 3,
+          "answer": "A new array with the same elements in reverse order"
+        },
+        { "id": 4, "answer": "The sum of all array elements" }
+      ],
+      "correctAnswer": 2
+    },
+    {
+      "id": 5,
+      "question": "Which method is used to combine nested arrays into the parent array?",
+      "answers": [
+        { "id": 1, "answer": "reduce()" },
+        { "id": 2, "answer": "concat()" },
+        { "id": 3, "answer": "join()" },
+        { "id": 4, "answer": "flat()" }
+      ],
+      "correctAnswer": 4
+    },
+    {
+      "id": 6,
+      "question": "What method checks if an array contains a specific value?",
+      "answers": [
+        { "id": 1, "answer": "indexOf()" },
+        { "id": 2, "answer": "contains()" },
+        { "id": 3, "answer": "includes()" },
+        { "id": 4, "answer": "some()" }
+      ],
+      "correctAnswer": 3
+    },
+    {
+      "id": 7,
+      "question": "What will the following code output: `[1, 2, 3].reduce((acc, curr) => acc + curr, 0)?`",
+      "answers": [
+        { "id": 1, "answer": "6" },
+        { "id": 2, "answer": "123" },
+        { "id": 3, "answer": "0123" },
+        { "id": 4, "answer": "0" }
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "id": 8,
+      "question": "How do you transform a string into an array of substrings, separated by a specific character?",
+      "answers": [
+        { "id": 1, "answer": "slice()" },
+        { "id": 2, "answer": "pop()" },
+        { "id": 3, "answer": "split()" },
+        { "id": 4, "answer": "isArray()" }
+      ],
+      "correctAnswer": 3
+    },
+    {
+      "id": 9,
+      "question": "What will be the output? `[1, 2, 3].find(x => x > 2)`",
+      "answers": [
+        { "id": 1, "answer": "1" },
+        { "id": 2, "answer": "2" },
+        { "id": 3, "answer": "3" },
+        { "id": 4, "answer": "undefined" }
+      ],
+      "correctAnswer": 3
+    },
+    {
+      "id": 10,
+      "question": "Which array method is used to sort the elements of an array in place?",
+      "answers": [
+        { "id": 1, "answer": "reverse()" },
+        { "id": 2, "answer": "reduce()" },
+        { "id": 3, "answer": "filter()" },
+        { "id": 4, "answer": "sort()" }
+      ],
+      "correctAnswer": 4
+    }
+  ]
+}
